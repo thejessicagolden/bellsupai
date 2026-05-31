@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bells Up AI — Enterprise AI Privacy for Solo & Small Firm Lawyers</title>
+  <link rel="canonical" href="index.html">
+<meta name="description" content="Access Claude, GPT, Gemini, and 5 more AI models with enterprise-grade privacy. Built for solo and small firm lawyers. $99/month, everything included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   Brand Palette
+   ============================================ */
+:root {
+  --brand-navy:       #142636;
+  --brand-slate:      #3B5466;
+  --brand-dust:       #94A6B8;
+  --brand-tan:        #D9D1C2;
+  --brand-cloud:      #F0EEE9;
+  --brand-graphite:   #52524F;
+  --brand-dark-brown: #292624;
+  --brand-charcoal:   #101720;
+  --brand-ai-gray:    #918D84;
+
+  --font-heading: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ============================================
+   Reset & Base
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--brand-dark-brown);
+  background: var(--brand-cloud);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--brand-navy);
+}
+
+h1 { font-size: 3.052rem; }
+h2 { font-size: 2.441rem; }
+h3 { font-size: 1.563rem; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.35rem; }
+}
+
+a {
+  color: var(--brand-slate);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--brand-navy);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section--navy {
+  background: var(--brand-navy);
+  color: var(--brand-cloud);
+}
+
+.section--navy h2,
+.section--navy h3 {
+  color: var(--brand-cloud);
+}
+
+.section--tan {
+  background: var(--brand-tan);
+}
+
+.section--charcoal {
+  background: var(--brand-charcoal);
+  color: var(--brand-cloud);
+}
+
+.section--charcoal h2,
+.section--charcoal h3 {
+  color: var(--brand-cloud);
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--brand-navy);
+  border-bottom: 1px solid rgba(240, 238, 233, 0.1);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo svg {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav__links a {
+  color: var(--brand-cloud);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.nav__links a:hover {
+  color: var(--brand-tan);
+}
+
+.nav__cta {
+  background: var(--brand-cloud);
+  color: var(--brand-navy) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600 !important;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.nav__cta:hover {
+  background: var(--brand-tan) !important;
+  color: var(--brand-navy) !important;
+  transform: translateY(-1px);
+}
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--brand-cloud);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav__toggle { display: block; }
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--brand-navy);
+    padding: 1rem 2rem 2rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(240,238,233,0.1);
+  }
+  .nav__links.active { display: flex; }
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.hero {
+  position: relative;
+  background: var(--brand-navy);
+  color: var(--brand-cloud);
+  padding: 10rem 0 6rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 140%;
+  background: radial-gradient(ellipse at center, rgba(59, 84, 102, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  max-width: 750px;
+}
+
+.hero h1 {
+  color: var(--brand-cloud);
+  margin-bottom: 1.5rem;
+  font-size: 3.4rem;
+  line-height: 1.15;
+}
+
+.hero__sub {
+  font-size: 1.25rem;
+  color: var(--brand-dust);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.25rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn--primary {
+  background: var(--brand-cloud);
+  color: var(--brand-navy);
+}
+
+.btn--primary:hover {
+  background: var(--brand-tan);
+  color: var(--brand-navy);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--brand-cloud);
+  border: 2px solid var(--brand-cloud);
+}
+
+.btn--outline:hover {
+  background: var(--brand-cloud);
+  color: var(--brand-navy);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 8rem 0 4rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+  .hero__sub {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================
+   Problem Section
+   ============================================ */
+.problem {
+  background: var(--brand-cloud);
+}
+
+.problem__content {
+  max-width: 700px;
+}
+
+.problem__content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.problem__content p {
+  color: var(--brand-graphite);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================
+   Founder Section
+   ============================================ */
+.founder {
+  background: var(--brand-tan);
+}
+
+.founder__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.founder__photo {
+  aspect-ratio: 3/2;
+  background: var(--brand-dust);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-slate);
+  font-size: 0.9rem;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.founder__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder__text h2 {
+  margin-bottom: 1.5rem;
+}
+
+.founder__text p {
+  color: var(--brand-graphite);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.founder__quote {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255,255,255,0.4);
+  border-left: 3px solid var(--brand-slate);
+  border-radius: 0 4px 4px 0;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--brand-slate);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .founder__photo {
+    max-height: 300px;
+  }
+}
+
+/* ============================================
+   Solution Section (Three Pillars)
+   ============================================ */
+.solution__headline {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.pillar {
+  background: white;
+  border-radius: 6px;
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--brand-tan);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pillar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(20, 38, 54, 0.08);
+}
+
+.pillar__icon {
+  width: 48px;
+  height: 64px;
+  background: var(--brand-navy);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.pillar__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--brand-cloud);
+}
+
+.pillar h3 {
+  margin-bottom: 1rem;
+}
+
+.pillar p {
+  color: var(--brand-graphite);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================
+   Tools Section
+   ============================================ */
+.tools {
+  background: var(--brand-navy);
+  color: var(--brand-cloud);
+}
+
+.tools__intro {
+  max-width: 650px;
+  margin-bottom: 3rem;
+}
+
+.tools__intro h2 {
+  color: var(--brand-cloud);
+  margin-bottom: 1rem;
+}
+
+.tools__intro p {
+  color: var(--brand-dust);
+  font-size: 1.05rem;
+}
+
+.tools__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.tool-card {
+  background: rgba(59, 84, 102, 0.25);
+  border: 1px solid rgba(148, 166, 184, 0.2);
+  border-radius: 6px;
+  padding: 2.5rem;
+  transition: background 0.2s;
+}
+
+.tool-card:hover {
+  background: rgba(59, 84, 102, 0.35);
+}
+
+.tool-card h3 {
+  color: var(--brand-cloud);
+  margin-bottom: 1rem;
+  font-size: 1.563rem;
+}
+
+.tool-card p {
+  color: var(--brand-dust);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.tools__coming-soon {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(148, 166, 184, 0.2);
+  color: var(--brand-dust);
+  font-size: 0.95rem;
+}
+
+.tools__coming-soon strong {
+  color: var(--brand-cloud);
+}
+
+@media (max-width: 768px) {
+  .tools__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Responsible Use
+   ============================================ */
+.responsible {
+  background: var(--brand-cloud);
+}
+
+.responsible__content {
+  max-width: 700px;
+}
+
+.responsible__content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.responsible__content p {
+  color: var(--brand-graphite);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   Brand Origin
+   ============================================ */
+.origin {
+  background: var(--brand-tan);
+}
+
+.origin__content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.origin__content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.origin__content p {
+  color: var(--brand-graphite);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.origin__content em {
+  font-style: italic;
+  color: var(--brand-slate);
+}
+
+/* ============================================
+   CTA / Early Access Form
+   ============================================ */
+.cta {
+  background: var(--brand-navy);
+  color: var(--brand-cloud);
+}
+
+.cta__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.cta__text h2 {
+  color: var(--brand-cloud);
+  margin-bottom: 1rem;
+}
+
+.cta__text p {
+  color: var(--brand-dust);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  background: rgba(59, 84, 102, 0.2);
+  border: 1px solid rgba(148, 166, 184, 0.2);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.form__group {
+  margin-bottom: 1.25rem;
+}
+
+.form__group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--brand-cloud);
+  margin-bottom: 0.4rem;
+}
+
+.form__group label .required {
+  color: var(--brand-dust);
+}
+
+.form__group input,
+.form__group select,
+.form__group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(240, 238, 233, 0.08);
+  border: 1px solid rgba(148, 166, 184, 0.3);
+  border-radius: 4px;
+  color: var(--brand-cloud);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.form__group input:focus,
+.form__group select:focus,
+.form__group textarea:focus {
+  outline: 2px solid #94A6B8;
+  outline-offset: 2px;
+  border-color: #94A6B8;
+  background: rgba(240, 238, 233, 0.12);
+}
+
+.form__group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2394A6B8' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form__group select option {
+  background: var(--brand-navy);
+  color: var(--brand-cloud);
+}
+
+.form__group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form__group input::placeholder,
+.form__group select::placeholder,
+.form__group textarea::placeholder {
+  color: #94A6B8;
+  opacity: 1;
+}
+.form__submit {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--brand-cloud);
+  color: var(--brand-navy);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.form__submit:hover {
+  background: var(--brand-tan);
+  transform: translateY(-1px);
+}
+
+.form__disclaimer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--brand-dust);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cta__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  background: var(--brand-charcoal);
+  color: var(--brand-dust);
+  padding: 2.5rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.footer__links {
+  margin-top: 0.75rem;
+}
+
+.footer__links a {
+  color: var(--brand-dust);
+  margin: 0 0.75rem;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: var(--brand-cloud);
+}
+
+/* ============================================
+   Decorative
+   ============================================ */
+.divider {
+  height: 1px;
+  background: var(--brand-tan);
+  border: none;
+  margin: 0;
+}
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: 9999;
+      padding: 0.75rem 1.5rem;
+      background: var(--brand-navy, #142636);
+      color: var(--brand-cloud, #F0EEE9);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0 0 4px 4px;
+    }
+    .skip-link:focus {
+      position: fixed;
+      left: 1rem;
+      top: 0;
+      width: auto;
+      height: auto;
+      overflow: visible;
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+.nav__signin {
+  background: transparent;
+  color: var(--brand-cloud) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600 !important;
+  border: 1.5px solid var(--brand-tan);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.nav__signin:hover {
+  background: var(--brand-tan) !important;
+  color: var(--brand-navy) !important;
+  transform: translateY(-1px);
+}
+</style>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bells Up AI — Enterprise AI Privacy for Solo & Small Firm Lawyers">
+  <meta property="og:description" content="Access Claude, GPT, Gemini, and 5 more AI models with enterprise-grade privacy. Built for solo and small firm lawyers. $99/month, everything included.">
+  <meta property="og:url" content="https://bellsup.ai/">
+  <meta property="og:site_name" content="Bells Up AI">
+  <meta property="og:image" content="https://bellsup.ai/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bells Up AI — Enterprise AI Privacy for Solo & Small Firm Lawyers">
+  <meta name="twitter:description" content="Access Claude, GPT, Gemini, and 5 more AI models with enterprise-grade privacy. Built for solo and small firm lawyers. $99/month, everything included.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bells Up AI",
+  "url": "https://bellsup.ai",
+  "logo": "https://bellsup.ai/favicon.png",
+  "description": "Enterprise-grade AI privacy protection for solo and small firm attorneys. All the leading AI models, one platform, one price.",
+  "email": "info@bellsup.ai",
+  "foundingDate": "2025",
+  "founder": {
+    "@type": "Person",
+    "name": "Rachel See",
+    "jobTitle": "Founder & CEO"
+  },
+  "sameAs": []
+}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="index.html#main-content">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Bells Up AI home">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 1440 612" xmlns="http://www.w3.org/2000/svg" style="height:56px;width:auto">
+        <g fill="#F0EEE9">
+          <path d="M195.68,176.22c32.49-7.62,53.19-23.86,53.19-43.99,0-22.57-26.02-38.24-64.11-38.24-15.96,0-26.88,2.73-38.38,2.73h-36.22c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v107.95c0,29.47-4.17,40.25-16.67,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h36.22c12.36,0,24.15,2.73,38.96,2.73,41.97,0,72.02-23,72.02-57.21,0-30.91-24.29-55.2-61.67-62.82ZM152.12,141.14c0-31.19,4.46-40.97,25.44-40.97,25.87,0,43.27,13.51,43.27,33.49,0,25.01-27.17,41.54-68.71,41.83v-34.36ZM178,290.21c-20.7,0-25.87-9.92-25.87-41.11v-67.99c8.19,0,16.24-.57,23.72-1.44,33.49,5.17,53.47,28.17,53.47,58.79s-21.27,51.75-51.32,51.75Z"/>
+          <path d="M406.91,249.38c-.86,0-1.58.29-1.87,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.08,0-16.67-8.77-16.67-38.81v-51.17h25.87c17.39,0,27.17,10.21,27.17,28.17,0,1.29,1.15,2.01,2.16,2.01,1.15,0,2.16-.72,2.16-2.01v-61.81c0-1.44-1.01-2.16-2.16-2.16-1.01,0-2.16.72-2.16,2.16,0,17.97-9.77,28.03-27.17,28.03h-25.87v-51.17c0-30.04,3.59-38.67,16.67-38.67h24.29c23.57,0,35.65,10.35,43.27,37.37.14.72.86,1.01,1.72,1.01,1.15,0,2.44-.57,2.44-1.72v-.14l-4.02-42.26h-126.35c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v107.95c0,29.47-4.17,40.25-16.67,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.75-42.12v-.29c0-1.01-1.15-1.72-2.3-1.72Z"/>
+          <path d="M567.39,249.38c-.72,0-1.44.29-1.72,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.22,0-16.82-8.77-16.82-38.81v-107.95c0-29.47,4.17-40.11,16.82-40.11.86,0,1.29-1.01,1.29-2.01,0-1.15-.43-2.3-1.29-2.3h-58.79c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.89-42.12v-.14c0-1.15-1.29-1.87-2.44-1.87Z"/>
+          <path d="M726.15,251.4v-.14c0-1.15-1.29-1.87-2.44-1.87-.72,0-1.44.29-1.72,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.22,0-16.82-8.77-16.82-38.81v-107.95c0-29.47,4.17-40.11,16.82-40.11.86,0,1.29-1.01,1.29-2.01,0-1.15-.43-2.3-1.29-2.3h-58.79c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.89-42.12Z"/>
+          <path d="M770.2,128.64c0-16.67,14.52-28.17,35.22-28.17,28.32,0,48.73,21.13,48.73,48.3,0,1.29,1.15,2.01,2.3,2.01.86,0,1.72-.57,1.87-1.72l6.47-39.39c-13.22-10.06-31.91-15.67-51.32-15.67-36.51,0-62.67,20.56-62.67,48.01,0,54.34,102.49,58.79,102.49,110.97,0,22.28-18.26,37.23-41.97,37.23-29.76,0-50.17-23.14-50.17-56.92,0-1.15-1.15-2.01-2.3-2.01-.86,0-1.72.57-1.87,1.87l-5.32,44.85c13.51,11.79,32.49,18.26,53.47,18.26,38.67,0,67.99-21.56,67.99-55.63,0-63.54-102.92-68.28-102.92-111.98Z"/>
+          <path d="M1163.62,96.73h-41.97c-.86,0-1.29,1.15-1.29,2.3,0,1.01.43,2.01,1.29,2.01,13.94,0,19.69,12.07,19.69,42.98v98.61c0,25.01-22.14,44.99-50.45,44.99s-50.31-19.69-50.31-44.99v-101.48c0-29.47,4.17-40.11,16.67-40.11,1.01,0,1.44-1.01,1.44-2.01,0-1.15-.57-2.3-1.44-2.3h-58.65c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v101.48c0,30.19,29.76,53.62,67.56,53.62s64.11-22.71,64.11-53.62v-101.48c0-29.47,4.17-40.11,16.67-40.11,1.01,0,1.44-1.01,1.44-2.01,0-1.15-.57-2.3-1.44-2.3Z"/>
+          <path d="M1238.86,199.07v5.61c53.47,0,92.43-26.16,92.43-60.66,0-29.47-28.03-50.02-66.12-50.02-13.94,0-24.87,2.73-36.37,2.73h-36.37c-.86,0-1.29,1.15-1.29,2.3,0,1.01.29,2.01,1.29,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.29.86-1.29,1.87,0,1.15.43,2.3,1.29,2.3h61.67c.86,0,1.29-1.15,1.29-2.16s-.43-2.01-1.29-2.01c-14.09,0-19.69-12.07-19.69-42.98v-105.22c0-31.19,4.46-40.97,23.86-40.97,26.59,0,44.99,18.54,44.99,45.42,0,31.77-25.73,53.47-64.4,53.47Z"/>
+        </g>
+        <g fill="#918D84">
+          <path d="M664.72,401.5l-51.34,116.51h15.63l12.01-28.63h58.25l11.85,28.63h16.13l-49.53-116.51h-13ZM646.46,476.54l24.19-57.27h.33l23.04,57.27h-47.56Z"/>
+          <rect x="759.18" y="401.5" width="13.82" height="116.51"/>
+        </g>
+      </svg>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-menu" role="list">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="index.html#why-bells-up">Why Bells Up</a></li>
+      <li><a href="team.html">The Team</a></li>
+      <li><a href="index.html#request-access" class="nav__cta">Request Access</a></li>
+      <li><a href="https://app.bellsup.ai/login.html" class="nav__signin">Sign In</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero__content">
+      <h1 id="hero-heading">Use AI with confidence. Protect every client.</h1>
+      <p class="hero__sub">All the leading AI models. Enterprise-grade privacy. One simple platform. $99/month.</p>
+      <a href="index.html#request-access" class="btn btn--primary">Request Early Access</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: The Problem -->
+<section class="section problem" id="how-it-works" aria-labelledby="how-it-works-heading">
+  <div class="container">
+    <div class="problem__content">
+      <h2 id="how-it-works-heading">AI is transforming law. Privacy hasn't kept up.</h2>
+      <p>Lawyers are adopting AI because it works: research, drafting, case analysis, and more. But most AI tools weren't built with your obligations in mind.</p>
+      <p>Bar associations across the country have made the stakes clear: using AI that trains on your inputs could put client confidentiality at risk. The duty of technology competence means keeping pace with tools that serve your clients without compromising the trust they've placed in you.</p>
+      <p>You shouldn't have to choose between working smarter and working safely.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Section 2: Founder Story -->
+<section class="section founder" id="why-bells-up" aria-labelledby="why-bells-up-heading">
+  <div class="container">
+    <div class="founder__grid">
+      <div class="founder__photo">
+        <!-- Replace src with actual photo path -->
+        <img src="rachel_image.jpg" alt="Rachel See, founder of Bells Up AI" data-fallback="Rachel See photo" loading="lazy">
+      </div>
+      <div class="founder__text">
+        <h2 id="why-bells-up-heading">Built by someone who's been in your shoes.</h2>
+        <p>I'm Rachel See. I've spent twenty years putting powerful technology into the hands of lawyers who were told they couldn't afford it.</p>
+        <p>At federal agencies, I built eDiscovery systems on tight budgets and trained hundreds of attorneys to use technology as a strategic advantage. As a BigLaw partner, I advised Fortune 100 companies on AI risk and governance. I've given hundreds of presentations to lawyers about what responsible AI adoption actually looks like.</p>
+        <p>I built Bells Up because I know what it means to be outmatched on resources, and I know the right tools can change that.</p>
+        <blockquote class="founder__quote">
+          "I've spent my career helping lawyers compete with better tools. Bells Up is the next step."
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: The Solution (Three Pillars) -->
+<section class="section" id="solution" aria-labelledby="solution-heading">
+  <div class="container">
+    <div class="solution__headline">
+      <h2 id="solution-heading">Every model. Real privacy. One platform.</h2>
+    </div>
+    <div class="pillars">
+
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.83-3.13 9.37-7 10.5-3.87-1.13-7-5.67-7-10.5V6.3l7-3.12z"/></svg>
+        </div>
+        <h3>Privacy you can verify, not just hope for.</h3>
+        <p>Bells Up connects to AI through enterprise APIs, the same channel used by major law firms and Fortune 500 companies. Your data is protected by contractual no-training agreements, not a settings toggle someone might forget to check.</p>
+        <p style="margin-top:1rem">We don't ask you to take our word for it. The privacy terms are transparent, published, and verifiable. You review them. You decide.</p>
+        <p style="margin-top:1rem">Summarize a deposition transcript. Draft a demand letter. Analyze a contract. Do it knowing your clients' information stays protected.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+        </div>
+        <h3>Access every leading AI in one place.</h3>
+        <p>Claude. GPT. Gemini. Grok. Llama. DeepSeek. Mistral. Qwen.</p>
+        <p style="margin-top:1rem">Eight provider families, one interface. Compare outputs side by side. When a new model launches, you can try it immediately. No new subscription, no additional privacy review.</p>
+        <p style="margin-top:1rem">No vendor lock-in. Just the best tools, always available.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+        </div>
+        <h3>$99/month. Everything included.</h3>
+        <p>All the leading foundation models, with privacy terms you can verify, for a single monthly price. One platform, one invoice. All models, all usage pooled.</p>
+        <p style="margin-top:1rem">Built for lawyers who need real tools at a price that respects how they practice.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Tools & Workflows -->
+<section class="section tools" aria-labelledby="tools-heading">
+  <div class="container">
+    <div class="tools__intro">
+      <h2 id="tools-heading">Tools designed for the way you think.</h2>
+      <p>Bells Up goes beyond a chat window. We're building structured workflows that match how lawyers actually approach their work.</p>
+    </div>
+    <div class="tools__grid">
+      <div class="tool-card">
+        <h3>Panel of Experts</h3>
+        <p>See how different AI models respond to the same prompt. See where they agree, where they diverge, and what each one catches. Get broader perspective before making your call.</p>
+      </div>
+      <div class="tool-card">
+        <h3>Complaint Analysis</h3>
+        <p>Upload any complaint and seven expert AI analysts review it at once — examining claims, legal theories, jurisdiction, damages exposure, and litigation risk in parallel. A synthesis model then integrates their findings into a unified assessment, highlighting where the analysts agree and where they diverge.</p>
+      </div>
+      <div class="tool-card">
+        <h3>Moot Court Simulator</h3>
+        <p>Upload your briefs and a transcript. Face questions from an AI judge, or an entire panel, each with a distinct judicial philosophy. Sharpen your arguments before the real thing.</p>
+      </div>
+    </div>
+    <p class="tools__coming-soon"><strong>Coming soon:</strong> Indictment analysis. Contention interrogatories. Deposition prep. More on the way.</p>
+  </div>
+</section>
+
+<!-- Section 5: Responsible Use -->
+<section class="section responsible" aria-labelledby="responsible-heading">
+  <div class="container">
+    <div class="responsible__content">
+      <h2 id="responsible-heading">What Bells Up Is and Isn't</h2>
+      <p>Bells Up gives you safe, private access to the most powerful AI tools available. It doesn't file anything on your behalf. It doesn't replace your professional judgment. And it doesn't guarantee that AI outputs are accurate. Verification is part of the work, just as it's always been.</p>
+      <p>We built the tool. How you use it is up to you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Brand Origin -->
+<section class="section origin" aria-labelledby="origin-heading">
+  <div class="container">
+    <div class="origin__content">
+      <h2 id="origin-heading">Why "Bells Up"?</h2>
+      <p>In orchestral music, the French horn is typically played with the bell facing away: warm, blended, restrained.</p>
+      <p>But sometimes the composer writes <em>bells up</em>. The players raise their instruments and the sound transforms: direct, clear, impossible to ignore.</p>
+      <p>That's the idea behind Bells Up AI. Small firm lawyers have been quietly doing exceptional work with limited tools. It's time to raise the bell.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Early Access CTA -->
+<section class="section cta" id="request-access" aria-labelledby="request-access-heading">
+  <div class="container">
+    <div class="cta__grid">
+      <div class="cta__text">
+        <h2 id="request-access-heading">Ready to work with confidence?</h2>
+        <p>Bells Up AI is in active development. We're opening early access to solo and small firm attorneys who want enterprise-grade AI tools without enterprise prices.</p>
+      </div>
+      <form class="form" aria-label="Request early access" action="https://formspree.io/f/maqpqgzq" method="POST">
+        <p style="font-size:0.8rem;color:var(--brand-dust);margin-bottom:1rem;">Fields marked <span aria-hidden="true">*</span> are required.</p>
+        <div class="form__group">
+          <label for="field-name">Name <span class="required" aria-hidden="true">*</span></label>
+          <input type="text" id="field-name" name="name" required aria-required="true" autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="form__group">
+          <label for="field-email">Email <span class="required" aria-hidden="true">*</span></label>
+          <input type="email" id="field-email" name="email" required aria-required="true" autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="form__group">
+          <label for="field-firm-size">Firm Size</label>
+            <select id="field-firm-size" name="firm_size">
+            <option value="">Select...</option>
+            <option>Solo practitioner</option>
+            <option>2-5 attorneys</option>
+            <option>6-10 attorneys</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="field-ai-use">What do you currently use AI for? <span style="font-weight:400;color:var(--brand-dust)">(optional)</span></label>
+            <textarea id="field-ai-use" name="ai_use" placeholder="Research, drafting, case analysis..."></textarea>
+        </div>
+        <div class="form__group">
+          <label for="field-barriers">What's holding you back from using more AI in your practice? <span style="font-weight:400;color:var(--brand-dust)">(optional)</span></label>
+            <textarea id="field-barriers" name="barriers" placeholder="Privacy concerns, cost, complexity..."></textarea>
+        </div>
+        <label for="gotcha-field" style="display:none">Do not fill this out</label><input type="text" id="gotcha-field" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="form__submit">Request Early Access</button>
+        <p class="form__disclaimer">We'll only use the information you submit to contact you about Bells Up AI.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Bells Up AI. All rights reserved.</p>
+    <div class="footer__links">
+      <a href="legal/website-privacy-notice.html">Privacy Policy</a>
+      <a href="legal/website-terms-of-use.html">Terms of Service</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="mailto:info@bellsup.ai">info@bellsup.ai</a>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

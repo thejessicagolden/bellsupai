@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Statement | Bells Up AI</title>
+  <link rel="canonical" href="accessibility.html">
+<meta name="description" content="Bells Up AI is committed to WCAG 2.1 AA accessibility. Learn about our approach, known limitations, and how to report accessibility issues.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand-navy:       #142636;
+  --brand-slate:      #3B5466;
+  --brand-dust:       #94A6B8;
+  --brand-tan:        #D9D1C2;
+  --brand-cloud:      #F0EEE9;
+  --brand-graphite:   #52524F;
+  --brand-dark-brown: #292624;
+  --brand-charcoal:   #101720;
+  --brand-ai-gray:    #918D84;
+  --font-heading: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--brand-dark-brown);
+  background: var(--brand-cloud);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--brand-navy);
+}
+h1 { font-size: 3.052rem; }
+h2 { font-size: 2.441rem; }
+h3 { font-size: 1.563rem; }
+a { color: var(--brand-slate); text-decoration: none; }
+a:hover { color: var(--brand-navy); }
+img { max-width: 100%; height: auto; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 5rem 0; }
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--brand-navy);
+  border-bottom: 1px solid rgba(240, 238, 233, 0.1);
+}
+.nav__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1100px; margin: 0 auto; padding: 1rem 2rem;
+}
+.nav__logo { display: flex; align-items: center; }
+.nav__logo svg { height: 64px; width: auto; display: block; }
+.nav__links { display: flex; gap: 2rem; list-style: none; }
+.nav__links a {
+  color: var(--brand-cloud); font-size: 0.9rem; font-weight: 500;
+  letter-spacing: 0.02em; transition: color 0.2s;
+}
+.nav__links a:hover { color: var(--brand-tan); }
+.nav__cta {
+  background: var(--brand-cloud); color: var(--brand-navy) !important;
+  padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600 !important;
+  transition: background 0.2s, transform 0.1s;
+}
+.nav__cta:hover {
+  background: var(--brand-tan) !important; color: var(--brand-navy) !important;
+  transform: translateY(-1px);
+}
+.nav__toggle {
+  display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;
+}
+.nav__toggle span {
+  display: block; width: 24px; height: 2px;
+  background: var(--brand-cloud); margin: 5px 0; transition: 0.3s;
+}
+.page-header { padding: 8rem 0 3rem; text-align: center; }
+.page-header h1 { margin-bottom: 1rem; color: var(--brand-navy); }
+.page-header p {
+  color: var(--brand-dark-brown); font-size: 1.15rem;
+  max-width: 650px; margin: 0 auto;
+}
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.563rem;
+}
+.content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+.content p {
+  color: var(--brand-dark-brown);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+.content ul {
+  color: var(--brand-dark-brown);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+.content li {
+  margin-bottom: 0.5rem;
+}
+.content a {
+  color: var(--brand-slate);
+  text-decoration: underline;
+}
+.content a:hover {
+  color: var(--brand-navy);
+}
+.divider { height: 1px; background: var(--brand-tan); border: none; margin: 0; }
+.footer {
+  background: var(--brand-charcoal); color: var(--brand-dust);
+  padding: 2.5rem 0; text-align: center; font-size: 0.85rem;
+}
+.footer__links { margin-top: 0.75rem; }
+.footer__links a {
+  color: var(--brand-dust); margin: 0 0.75rem; transition: color 0.2s;
+}
+.footer__links a:hover { color: var(--brand-cloud); }
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.35rem; }
+  .nav__toggle { display: block; }
+  .nav__links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; background: var(--brand-navy);
+    padding: 1rem 2rem 2rem; gap: 1rem;
+    border-bottom: 1px solid rgba(240,238,233,0.1);
+  }
+  .nav__links.active { display: flex; }
+}
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: 9999;
+      padding: 0.75rem 1.5rem;
+      background: var(--brand-navy, #142636);
+      color: var(--brand-cloud, #F0EEE9);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0 0 4px 4px;
+    }
+    .skip-link:focus {
+      position: fixed;
+      left: 1rem;
+      top: 0;
+      width: auto;
+      height: auto;
+      overflow: visible;
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+.nav__signin {
+  background: transparent;
+  color: var(--brand-cloud) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600 !important;
+  border: 1.5px solid var(--brand-tan);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.nav__signin:hover {
+  background: var(--brand-tan) !important;
+  color: var(--brand-navy) !important;
+  transform: translateY(-1px);
+}
+</style>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Accessibility Statement | Bells Up AI">
+  <meta property="og:description" content="Bells Up AI is committed to WCAG 2.1 AA accessibility. Learn about our approach, known limitations, and how to report accessibility issues.">
+  <meta property="og:url" content="https://bellsup.ai/accessibility.html">
+  <meta property="og:site_name" content="Bells Up AI">
+  <meta property="og:image" content="https://bellsup.ai/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Accessibility Statement | Bells Up AI">
+  <meta name="twitter:description" content="Bells Up AI is committed to WCAG 2.1 AA accessibility. Learn about our approach, known limitations, and how to report accessibility issues.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+<a class="skip-link" href="accessibility.html#main-content">Skip to main content</a>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Bells Up AI home">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 1440 612" xmlns="http://www.w3.org/2000/svg" style="height:56px;width:auto">
+        <g fill="#F0EEE9">
+          <path d="M195.68,176.22c32.49-7.62,53.19-23.86,53.19-43.99,0-22.57-26.02-38.24-64.11-38.24-15.96,0-26.88,2.73-38.38,2.73h-36.22c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v107.95c0,29.47-4.17,40.25-16.67,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h36.22c12.36,0,24.15,2.73,38.96,2.73,41.97,0,72.02-23,72.02-57.21,0-30.91-24.29-55.2-61.67-62.82ZM152.12,141.14c0-31.19,4.46-40.97,25.44-40.97,25.87,0,43.27,13.51,43.27,33.49,0,25.01-27.17,41.54-68.71,41.83v-34.36ZM178,290.21c-20.7,0-25.87-9.92-25.87-41.11v-67.99c8.19,0,16.24-.57,23.72-1.44,33.49,5.17,53.47,28.17,53.47,58.79s-21.27,51.75-51.32,51.75Z"/>
+          <path d="M406.91,249.38c-.86,0-1.58.29-1.87,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.08,0-16.67-8.77-16.67-38.81v-51.17h25.87c17.39,0,27.17,10.21,27.17,28.17,0,1.29,1.15,2.01,2.16,2.01,1.15,0,2.16-.72,2.16-2.01v-61.81c0-1.44-1.01-2.16-2.16-2.16-1.01,0-2.16.72-2.16,2.16,0,17.97-9.77,28.03-27.17,28.03h-25.87v-51.17c0-30.04,3.59-38.67,16.67-38.67h24.29c23.57,0,35.65,10.35,43.27,37.37.14.72.86,1.01,1.72,1.01,1.15,0,2.44-.57,2.44-1.72v-.14l-4.02-42.26h-126.35c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v107.95c0,29.47-4.17,40.25-16.67,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.75-42.12v-.29c0-1.01-1.15-1.72-2.3-1.72Z"/>
+          <path d="M567.39,249.38c-.72,0-1.44.29-1.72,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.22,0-16.82-8.77-16.82-38.81v-107.95c0-29.47,4.17-40.11,16.82-40.11.86,0,1.29-1.01,1.29-2.01,0-1.15-.43-2.3-1.29-2.3h-58.79c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.89-42.12v-.14c0-1.15-1.29-1.87-2.44-1.87Z"/>
+          <path d="M726.15,251.4v-.14c0-1.15-1.29-1.87-2.44-1.87-.72,0-1.44.29-1.72,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.22,0-16.82-8.77-16.82-38.81v-107.95c0-29.47,4.17-40.11,16.82-40.11.86,0,1.29-1.01,1.29-2.01,0-1.15-.43-2.3-1.29-2.3h-58.79c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.89-42.12Z"/>
+          <path d="M770.2,128.64c0-16.67,14.52-28.17,35.22-28.17,28.32,0,48.73,21.13,48.73,48.3,0,1.29,1.15,2.01,2.3,2.01.86,0,1.72-.57,1.87-1.72l6.47-39.39c-13.22-10.06-31.91-15.67-51.32-15.67-36.51,0-62.67,20.56-62.67,48.01,0,54.34,102.49,58.79,102.49,110.97,0,22.28-18.26,37.23-41.97,37.23-29.76,0-50.17-23.14-50.17-56.92,0-1.15-1.15-2.01-2.3-2.01-.86,0-1.72.57-1.87,1.87l-5.32,44.85c13.51,11.79,32.49,18.26,53.47,18.26,38.67,0,67.99-21.56,67.99-55.63,0-63.54-102.92-68.28-102.92-111.98Z"/>
+          <path d="M1163.62,96.73h-41.97c-.86,0-1.29,1.15-1.29,2.3,0,1.01.43,2.01,1.29,2.01,13.94,0,19.69,12.07,19.69,42.98v98.61c0,25.01-22.14,44.99-50.45,44.99s-50.31-19.69-50.31-44.99v-101.48c0-29.47,4.17-40.11,16.67-40.11,1.01,0,1.44-1.01,1.44-2.01,0-1.15-.57-2.3-1.44-2.3h-58.65c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v101.48c0,30.19,29.76,53.62,67.56,53.62s64.11-22.71,64.11-53.62v-101.48c0-29.47,4.17-40.11,16.67-40.11,1.01,0,1.44-1.01,1.44-2.01,0-1.15-.57-2.3-1.44-2.3Z"/>
+          <path d="M1238.86,199.07v5.61c53.47,0,92.43-26.16,92.43-60.66,0-29.47-28.03-50.02-66.12-50.02-13.94,0-24.87,2.73-36.37,2.73h-36.37c-.86,0-1.29,1.15-1.29,2.3,0,1.01.29,2.01,1.29,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.29.86-1.29,1.87,0,1.15.43,2.3,1.29,2.3h61.67c.86,0,1.29-1.15,1.29-2.16s-.43-2.01-1.29-2.01c-14.09,0-19.69-12.07-19.69-42.98v-105.22c0-31.19,4.46-40.97,23.86-40.97,26.59,0,44.99,18.54,44.99,45.42,0,31.77-25.73,53.47-64.4,53.47Z"/>
+        </g>
+        <g fill="#918D84">
+          <path d="M664.72,401.5l-51.34,116.51h15.63l12.01-28.63h58.25l11.85,28.63h16.13l-49.53-116.51h-13ZM646.46,476.54l24.19-57.27h.33l23.04,57.27h-47.56Z"/>
+          <rect x="759.18" y="401.5" width="13.82" height="116.51"/>
+        </g>
+      </svg>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-menu" role="list">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="index.html#why-bells-up">Why Bells Up</a></li>
+      <li><a href="team.html">The Team</a></li>
+      <li><a href="index.html#request-access" class="nav__cta">Request Access</a></li>
+      <li><a href="https://app.bellsup.ai/login.html" class="nav__signin">Sign In</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<section class="page-header" aria-labelledby="accessibility-statement-heading">
+  <div class="container">
+    <h1 id="accessibility-statement-heading">Accessibility Statement</h1>
+    <p style="font-size:0.85rem;color:var(--brand-graphite);margin-top:0.5rem;">Version 1.0 &middot; Effective April 15, 2026 &nbsp;&middot;&nbsp; bellsup.ai</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" aria-labelledby="our-approach-heading">
+  <div class="container">
+    <div class="content">
+      <p>Bells Up AI is committed to making our product accessible to everyone, including users of assistive technology. We design and build to conform with the Web Content Accessibility Guidelines (WCAG) 2.1 at the AA level, and to the AAA level where possible.</p>
+      <p>WCAG 2.1 addresses accessibility across a wide range of disabilities, including visual, auditory, physical, speech, cognitive, language, learning, and neurological, and applies across desktops, mobile devices, and other platforms.</p>
+
+      <h2 id="our-approach-heading">Our approach</h2>
+      <p>WCAG 2.1 provides a strong baseline, but we recognize that guidelines alone don't address every user need. We go beyond minimum requirements where we can, and we validate our conformance claims through ongoing testing. That validation process is continuous, not a one-time exercise.</p>
+
+      <h2>Known limitations</h2>
+      <p>Our product is currently unstable on mobile operating systems. We are focused first on verifying WCAG 2.1 AA conformance on desktop, and will be improving mobile stability soon.</p>
+
+      <h2>Contact us</h2>
+      <p>If you have questions or would like to report an accessibility issue with Bells Up AI or our website, please email <a href="mailto:info@bellsup.ai">info@bellsup.ai</a>. Our point of contact for accessibility is Marc Seawright.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Bells Up AI. All rights reserved.</p>
+    <div class="footer__links">
+      <a href="legal/website-privacy-notice.html">Privacy Policy</a>
+      <a href="legal/website-terms-of-use.html">Terms of Service</a>
+      <a href="accessibility.html" aria-current="page">Accessibility</a>
+      <a href="mailto:info@bellsup.ai">info@bellsup.ai</a>
+    </div>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

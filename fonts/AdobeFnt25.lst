@@ -1,0 +1,86 @@
+%!Adobe-FontList 1.25
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/jessicagolden/Desktop/Bells Up AI Brand Guidelines - 0526 Folder/Document fonts/AdobeFnt25.lst
+FileLength:1807
+FileModTime:800994400
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Inter-Regular
+FamilyName:Inter
+StyleName:Regular
+MenuName:Inter
+FamilyPrefix:Inter
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Inter Regular
+WritingScript:Roman
+OutlineFileName:/Users/jessicagolden/Desktop/Bells Up AI Brand Guidelines - 0526 Folder/Document fonts/Inter-VariableFont_opsz,wght.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:TrueTypeVariableFont
+FileLength:874708
+FileModTime:779216928
+NameArray:0,Win,1,Inter
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSerif4Italic-Italic
+FamilyName:Source Serif 4
+StyleName:Italic
+MenuName:Source Serif 4
+FamilyPrefix:SourceSerif4Italic
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Source Serif 4 Italic
+WritingScript:Roman
+OutlineFileName:/Users/jessicagolden/Desktop/Bells Up AI Brand Guidelines - 0526 Folder/Document fonts/SourceSerif4-Italic-VariableFont_opsz,wght.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:TrueTypeVariableFont
+FileLength:843444
+FileModTime:779301864
+NameArray:0,Win,1,Source Serif 4
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSerif4Roman-Regular
+FamilyName:Source Serif 4
+StyleName:Regular
+MenuName:Source Serif 4
+FamilyPrefix:SourceSerif4Roman
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Source Serif 4 Regular
+WritingScript:Roman
+OutlineFileName:/Users/jessicagolden/Desktop/Bells Up AI Brand Guidelines - 0526 Folder/Document fonts/SourceSerif4-VariableFont_opsz,wght.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:TrueTypeVariableFont
+FileLength:1196808
+FileModTime:779301864
+NameArray:0,Win,1,Source Serif 4
+%EndFont
+

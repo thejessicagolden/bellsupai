@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Terms of Use | Bells Up AI</title>
+  <link rel="canonical" href="website-terms-of-use.html">
+  <meta name="description" content="Terms of use for the Bells Up AI website. Covers intellectual property, prohibited use, disclaimers, and contact information.">
+  <style>
+
+    :root {
+      --bg:           #F0EEE9;
+      --bg-surface:   transparent;
+      --bg-raised:    #F0EEE9;
+      --bg-card:      transparent;
+      --border:       #D9D1C2;
+      --border-dim:   #D9D1C2;
+
+      --ink:          #292624;
+      --ink-mid:      #52524F;
+      --ink-dim:      #94A6B8;
+
+      --purple:       #3B5466;
+      --purple-dim:   #142636;
+
+      --radius:       8px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--purple);
+      color: #F0EEE9;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 0 0 var(--radius) var(--radius);
+      text-decoration: none;
+      z-index: 9999;
+    }
+    .skip-link:focus { top: 0; }
+
+    :focus-visible {
+      outline: 2px solid var(--purple);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg-surface);
+      border-bottom: 1px solid #D9D1C2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      height: 52px;
+    }
+
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 28px; height: 28px;
+      background: var(--bg-card);
+      border: none;
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-icon svg { width: 15px; height: 15px; }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+
+    .topbar-pill {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      background: var(--bg-raised);
+      border: none;
+      border-radius: 99px;
+      padding: 0.25rem 0.75rem;
+    }
+
+    main.page {
+      display: block;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem 5rem;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #D9D1C2;
+    }
+
+    .header-icon {
+      width: 52px; height: 52px;
+      background: var(--bg-card);
+      border: none;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+    .header-icon svg { width: 24px; height: 24px; }
+
+    .page-header h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .page-header .meta {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      letter-spacing: 0.02em;
+    }
+
+    .summary-card {
+      background: var(--bg-card);
+      border: none;
+      border-left: 3px solid #3B5466;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .card-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3B5466;
+      margin-bottom: 0.85rem;
+    }
+
+    .summary-card p {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.75rem;
+      line-height: 1.65;
+    }
+    .summary-card p:last-child { margin-bottom: 0; }
+    .summary-card p strong { color: var(--ink); font-weight: 500; }
+
+    .section {
+      margin-bottom: 2rem;
+      background: var(--bg-card);
+      border: none;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #D9D1C2;
+      background: var(--bg-surface);
+    }
+
+    .section-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--ink-dim);
+      background: var(--bg-raised);
+      border: none;
+      border-radius: 4px;
+      padding: 0.15rem 0.45rem;
+      flex-shrink: 0;
+    }
+
+    .section-header h2 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+
+    .section-body {
+      padding: 1.25rem 1.25rem;
+    }
+
+    .section-body p {
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.85rem;
+      line-height: 1.7;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+    .section-body p strong { color: var(--ink); font-weight: 500; }
+
+    .section-body ul {
+      padding-left: 1.25rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-body li {
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.4rem;
+      line-height: 1.7;
+    }
+    .section-body li:last-child { margin-bottom: 0; }
+    .section-body li strong { color: var(--ink); font-weight: 500; }
+
+    h3.sub-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #3B5466;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid #D9D1C2;
+    }
+    h3.sub-label:first-child { margin-top: 0; }
+
+    .contact-block {
+      background: var(--bg-surface);
+      border: none;
+      border-radius: 6px;
+      padding: 1rem 1.1rem;
+      font-size: 0.83rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      margin-top: 0.75rem;
+    }
+    .contact-block strong { color: var(--ink); font-weight: 500; }
+
+    a { color: #3B5466; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border-dim);
+      background: var(--bg-surface);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--ink-dim);
+      letter-spacing: 0.02em;
+    }
+    footer a { color: var(--ink-dim); }
+    footer a:hover { color: #3B5466; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      main.page { padding: 2rem 1rem 4rem; }
+      .topbar { padding: 0 1rem; }
+    }
+  
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: #142636;
+      border-bottom: 1px solid rgba(240, 238, 233, 0.1);
+    }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1100px; margin: 0 auto; padding: 1rem 2rem;
+    }
+    .nav__logo { display: flex; align-items: center; text-decoration: none; }
+    .nav__logo svg { height: 56px; width: auto; display: block; }
+    .nav__links { display: flex; gap: 2rem; list-style: none; }
+    .nav__links a {
+      color: #F0EEE9; font-size: 0.9rem; font-weight: 500;
+      letter-spacing: 0.02em; transition: color 0.2s; text-decoration: none;
+    }
+    .nav__links a:hover { color: #D9D1C2; }
+    .nav__cta {
+      background: #F0EEE9; color: #142636 !important;
+      padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600 !important;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .nav__cta:hover {
+      background: #D9D1C2 !important; color: #142636 !important;
+      transform: translateY(-1px);
+    }
+    .nav__signin {
+      background: transparent; color: #F0EEE9 !important;
+      padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 600 !important;
+      border: 1.5px solid #D9D1C2;
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+    }
+    .nav__signin:hover {
+      background: #D9D1C2 !important; color: #142636 !important;
+      transform: translateY(-1px);
+    }
+    .nav__toggle {
+      display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;
+    }
+    .nav__toggle span {
+      display: block; width: 24px; height: 2px;
+      background: #F0EEE9; margin: 5px 0; transition: 0.3s;
+    }
+    @media (max-width: 768px) {
+      .nav__toggle { display: block; }
+      .nav__links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; background: #142636;
+        padding: 1rem 2rem 2rem; gap: 1rem;
+        border-bottom: 1px solid rgba(240, 238, 233, 0.1);
+      }
+      .nav__links.active { display: flex; }
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Website Terms of Use | Bells Up AI">
+  <meta property="og:description" content="Terms of use for the Bells Up AI website. Covers intellectual property, prohibited use, disclaimers, and contact information.">
+  <meta property="og:url" content="https://bellsup.ai/legal/website-terms-of-use.html">
+  <meta property="og:site_name" content="Bells Up AI">
+  <meta property="og:image" content="https://bellsup.ai/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Website Terms of Use | Bells Up AI">
+  <meta name="twitter:description" content="Terms of use for the Bells Up AI website. Covers intellectual property, prohibited use, disclaimers, and contact information.">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+<a class="skip-link" href="website-terms-of-use.html#main-content">Skip to main content</a>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo" aria-label="Bells Up AI home">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 1440 612" xmlns="http://www.w3.org/2000/svg" style="height:56px;width:auto">
+        <g fill="#F0EEE9">
+          <path d="M195.68,176.22c32.49-7.62,53.19-23.86,53.19-43.99,0-22.57-26.02-38.24-64.11-38.24-15.96,0-26.88,2.73-38.38,2.73h-36.22c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v107.95c0,29.47-4.17,40.25-16.67,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h36.22c12.36,0,24.15,2.73,38.96,2.73,41.97,0,72.02-23,72.02-57.21,0-30.91-24.29-55.2-61.67-62.82ZM152.12,141.14c0-31.19,4.46-40.97,25.44-40.97,25.87,0,43.27,13.51,43.27,33.49,0,25.01-27.17,41.54-68.71,41.83v-34.36ZM178,290.21c-20.7,0-25.87-9.92-25.87-41.11v-67.99c8.19,0,16.24-.57,23.72-1.44,33.49,5.17,53.47,28.17,53.47,58.79s-21.27,51.75-51.32,51.75Z"/>
+          <path d="M406.91,249.38c-.86,0-1.58.29-1.87,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.08,0-16.67-8.77-16.67-38.81v-51.17h25.87c17.39,0,27.17,10.21,27.17,28.17,0,1.29,1.15,2.01,2.16,2.01,1.15,0,2.16-.72,2.16-2.01v-61.81c0-1.44-1.01-2.16-2.16-2.16-1.01,0-2.16.72-2.16,2.16,0,17.97-9.77,28.03-27.17,28.03h-25.87v-51.17c0-30.04,3.59-38.67,16.67-38.67h24.29c23.57,0,35.65,10.35,43.27,37.37.14.72.86,1.01,1.72,1.01,1.15,0,2.44-.57,2.44-1.72v-.14l-4.02-42.26h-126.35c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v107.95c0,29.47-4.17,40.25-16.67,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.75-42.12v-.29c0-1.01-1.15-1.72-2.3-1.72Z"/>
+          <path d="M567.39,249.38c-.72,0-1.44.29-1.72,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.22,0-16.82-8.77-16.82-38.81v-107.95c0-29.47,4.17-40.11,16.82-40.11.86,0,1.29-1.01,1.29-2.01,0-1.15-.43-2.3-1.29-2.3h-58.79c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.89-42.12v-.14c0-1.15-1.29-1.87-2.44-1.87Z"/>
+          <path d="M726.15,251.4v-.14c0-1.15-1.29-1.87-2.44-1.87-.72,0-1.44.29-1.72,1.15-7.47,26.74-21.56,37.37-44.99,37.37h-28.03c-13.22,0-16.82-8.77-16.82-38.81v-107.95c0-29.47,4.17-40.11,16.82-40.11.86,0,1.29-1.01,1.29-2.01,0-1.15-.43-2.3-1.29-2.3h-58.79c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.44,1.01-1.44,2.01s.57,2.16,1.44,2.16h130.09l5.89-42.12Z"/>
+          <path d="M770.2,128.64c0-16.67,14.52-28.17,35.22-28.17,28.32,0,48.73,21.13,48.73,48.3,0,1.29,1.15,2.01,2.3,2.01.86,0,1.72-.57,1.87-1.72l6.47-39.39c-13.22-10.06-31.91-15.67-51.32-15.67-36.51,0-62.67,20.56-62.67,48.01,0,54.34,102.49,58.79,102.49,110.97,0,22.28-18.26,37.23-41.97,37.23-29.76,0-50.17-23.14-50.17-56.92,0-1.15-1.15-2.01-2.3-2.01-.86,0-1.72.57-1.87,1.87l-5.32,44.85c13.51,11.79,32.49,18.26,53.47,18.26,38.67,0,67.99-21.56,67.99-55.63,0-63.54-102.92-68.28-102.92-111.98Z"/>
+          <path d="M1163.62,96.73h-41.97c-.86,0-1.29,1.15-1.29,2.3,0,1.01.43,2.01,1.29,2.01,13.94,0,19.69,12.07,19.69,42.98v98.61c0,25.01-22.14,44.99-50.45,44.99s-50.31-19.69-50.31-44.99v-101.48c0-29.47,4.17-40.11,16.67-40.11,1.01,0,1.44-1.01,1.44-2.01,0-1.15-.57-2.3-1.44-2.3h-58.65c-.86,0-1.44,1.15-1.44,2.3,0,1.01.43,2.01,1.44,2.01,12.51,0,16.67,10.64,16.67,40.11v101.48c0,30.19,29.76,53.62,67.56,53.62s64.11-22.71,64.11-53.62v-101.48c0-29.47,4.17-40.11,16.67-40.11,1.01,0,1.44-1.01,1.44-2.01,0-1.15-.57-2.3-1.44-2.3Z"/>
+          <path d="M1238.86,199.07v5.61c53.47,0,92.43-26.16,92.43-60.66,0-29.47-28.03-50.02-66.12-50.02-13.94,0-24.87,2.73-36.37,2.73h-36.37c-.86,0-1.29,1.15-1.29,2.3,0,1.01.29,2.01,1.29,2.01,12.65,0,16.82,10.64,16.82,40.11v107.95c0,29.47-4.17,40.25-16.82,40.25-1.01,0-1.29.86-1.29,1.87,0,1.15.43,2.3,1.29,2.3h61.67c.86,0,1.29-1.15,1.29-2.16s-.43-2.01-1.29-2.01c-14.09,0-19.69-12.07-19.69-42.98v-105.22c0-31.19,4.46-40.97,23.86-40.97,26.59,0,44.99,18.54,44.99,45.42,0,31.77-25.73,53.47-64.4,53.47Z"/>
+        </g>
+        <g fill="#918D84">
+          <path d="M664.72,401.5l-51.34,116.51h15.63l12.01-28.63h58.25l11.85,28.63h16.13l-49.53-116.51h-13ZM646.46,476.54l24.19-57.27h.33l23.04,57.27h-47.56Z"/>
+          <rect x="759.18" y="401.5" width="13.82" height="116.51"/>
+        </g>
+      </svg>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-menu" role="list">
+      <li><a href="../index.html#how-it-works">How It Works</a></li>
+      <li><a href="../index.html#why-bells-up">Why Bells Up</a></li>
+      <li><a href="../team.html">The Team</a></li>
+      <li><a href="../index.html#request-access" class="nav__cta">Request Access</a></li>
+      <li><a href="https://app.bellsup.ai/login.html" class="nav__signin">Sign In</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page" id="main-content">
+
+  <div class="page-header">
+    <div class="header-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#a095ff" stroke-width="1.5"
+           stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true" focusable="false">
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+    </div>
+    <h1>Website Terms of Use</h1>
+    <p class="meta">Version 1.0 &middot; Effective March 10, 2026 &nbsp;&middot;&nbsp; bellsup.ai</p>
+  </div>
+
+  <!-- Summary card -->
+  <article class="summary-card">
+    <p class="card-label">Scope</p>
+    <p>These Website Terms of Use (&ldquo;Terms&rdquo;) govern your use of the Bells Up AI marketing website at <strong>bellsup.ai</strong> (the &ldquo;Site&rdquo;). The Site provides information about Bells Up AI and allows you to request access to our platform.</p>
+    <p>If you have an account on our platform at <strong>app.bellsup.ai</strong> (the &ldquo;Service&rdquo;), your use of the Service is governed by our separate <a href="https://app.bellsup.ai/static/legal/terms-v0.9-beta.html">Terms of Service</a> and <a href="https://app.bellsup.ai/static/legal/privacy-v0.9-beta.html">Privacy Policy</a>.</p>
+  </article>
+
+  <!-- Section 01: Acceptance -->
+  <section class="section" aria-labelledby="tou-acceptance">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">01</span>
+      <h2 id="tou-acceptance">Acceptance</h2>
+    </div>
+    <div class="section-body">
+      <p>By accessing or using the Site, you agree to be bound by these Terms and our <a href="website-privacy-notice.html">Website Privacy Notice</a>. If you do not agree to these Terms, do not use the Site.</p>
+    </div>
+  </section>
+
+  <!-- Section 02: About Bells Up AI -->
+  <section class="section" aria-labelledby="tou-about-bells-up-ai">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">02</span>
+      <h2 id="tou-about-bells-up-ai">About Bells Up AI</h2>
+    </div>
+    <div class="section-body">
+      <p>Bells Up AI provides an AI-assisted platform designed for licensed attorneys and legal professionals. The Site describes our product. The Site does not provide legal advice, and nothing on the Site creates an attorney-client relationship between you and Bells Up AI, Inc. or any of our employees.</p>
+      <p>Information on the Site is provided for general informational purposes only and may not reflect the most current product features, pricing, or availability.</p>
+    </div>
+  </section>
+
+  <!-- Section 03: Waitlist and Form Submissions -->
+  <section class="section" aria-labelledby="tou-waitlist-and-form-submissions">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">03</span>
+      <h2 id="tou-waitlist-and-form-submissions">Waitlist and Form Submissions</h2>
+    </div>
+    <div class="section-body">
+      <p>You may submit your name, email address, and other information through forms on the Site to request access to the Service or to contact us. By submitting a form, you consent to our collection and use of that information as described in our <a href="website-privacy-notice.html">Website Privacy Notice</a>.</p>
+      <p><strong>Do not submit privileged, confidential, or sensitive client information through website forms.</strong> Form submissions are transmitted via a third-party form processor (Formspree) and delivered to us by email. They are not encrypted end-to-end and are not subject to the security protections that apply to conversations within the Service.</p>
+      <p>Submitting a waitlist request does not guarantee access to the Service.</p>
+    </div>
+  </section>
+
+  <!-- Section 04: Intellectual Property -->
+  <section class="section" aria-labelledby="tou-intellectual-property">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">04</span>
+      <h2 id="tou-intellectual-property">Intellectual Property</h2>
+    </div>
+    <div class="section-body">
+      <h3 class="sub-label">Site Content</h3>
+      <p>All content on the Site &mdash; including text, design, graphics, logos, icons, and software &mdash; is the property of Bells Up AI, Inc. and is protected by intellectual property laws. You may view and share links to Site content for personal, non-commercial purposes. You may not reproduce, modify, distribute, or create derivative works from Site content without prior written permission.</p>
+
+      <h3 class="sub-label">Trademarks</h3>
+      <p>&ldquo;Bells Up AI,&rdquo; the Bells Up AI logo, and related marks are trademarks of Bells Up AI, Inc. You may not use our trademarks without prior written permission, except to accurately refer to our company or products in a factual context.</p>
+    </div>
+  </section>
+
+  <!-- Section 05: Prohibited Use -->
+  <section class="section" aria-labelledby="tou-prohibited-use">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">05</span>
+      <h2 id="tou-prohibited-use">Prohibited Use</h2>
+    </div>
+    <div class="section-body">
+      <p>You may not:</p>
+      <ul>
+        <li>Use automated tools (bots, scrapers, crawlers) to access, index, or extract content from the Site, except as permitted by our <a href="../robots.txt">robots.txt</a></li>
+        <li>Use Site content, in whole or in part, to train, fine-tune, or otherwise develop machine learning or artificial intelligence models</li>
+        <li>Attempt to gain unauthorized access to the Site&rsquo;s infrastructure or any related systems</li>
+        <li>Interfere with or disrupt the availability or performance of the Site</li>
+        <li>Transmit malicious code or conduct security testing without prior written authorization</li>
+        <li>Frame, mirror, or create derivative versions of the Site</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 06: Disclaimers -->
+  <section class="section" aria-labelledby="tou-disclaimers">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">06</span>
+      <h2 id="tou-disclaimers">Disclaimers</h2>
+    </div>
+    <div class="section-body">
+      <p>The Site is provided <strong>&ldquo;as is&rdquo;</strong> and <strong>&ldquo;as available&rdquo;</strong> without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+      <p>We do not warrant that the Site will be uninterrupted, error-free, or free of harmful components. Product descriptions, pricing, and feature information on the Site may change without notice.</p>
+      <p>The Site may contain links to third-party websites. We are not responsible for the content, privacy practices, or availability of those websites.</p>
+    </div>
+  </section>
+
+  <!-- Section 07: Limitation of Liability -->
+  <section class="section" aria-labelledby="tou-limitation-of-liability">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">07</span>
+      <h2 id="tou-limitation-of-liability">Limitation of Liability</h2>
+    </div>
+    <div class="section-body">
+      <p>To the maximum extent permitted by law, Bells Up AI, Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the Site.</p>
+      <p>Our total aggregate liability for any claims arising out of or related to these Terms or the Site shall not exceed one hundred dollars ($100).</p>
+    </div>
+  </section>
+
+  <!-- Section 08: Changes to These Terms -->
+  <section class="section" aria-labelledby="tou-changes-to-these-terms">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">08</span>
+      <h2 id="tou-changes-to-these-terms">Changes to These Terms</h2>
+    </div>
+    <div class="section-body">
+      <p>We may update these Terms from time to time. When we do, we will update the version number and effective date at the top of this page. Your continued use of the Site after the effective date of updated Terms constitutes acceptance of those changes.</p>
+    </div>
+  </section>
+
+  <!-- Section 09: Governing Law -->
+  <section class="section" aria-labelledby="tou-governing-law">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">09</span>
+      <h2 id="tou-governing-law">Governing Law</h2>
+    </div>
+    <div class="section-body">
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law provisions.</p>
+      <p>Any disputes arising from these Terms or your use of the Site shall be resolved in the state or federal courts located in Delaware, and you consent to the personal jurisdiction of those courts.</p>
+    </div>
+  </section>
+
+  <!-- Section 10: Contact -->
+  <section class="section" aria-labelledby="tou-contact">
+    <div class="section-header">
+      <span class="section-num" aria-hidden="true">10</span>
+      <h2 id="tou-contact">Contact</h2>
+    </div>
+    <div class="section-body">
+      <p>Questions about these Terms:</p>
+      <div class="contact-block">
+        <address style="font-style: normal;">
+          <strong>Bells Up AI, Inc.</strong><br />
+          PO Box 29246, Henrico, VA 23242-9246, United States<br />
+          Email: <a href="mailto:legal@bellsup.ai">legal@bellsup.ai</a>
+        </address>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer style="border-top:none;background:#101720;color:#94A6B8;padding:2.5rem 0;text-align:center;font-size:0.85rem;display:block;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
+    <p>&copy; 2026 Bells Up AI. All rights reserved.</p>
+    <div style="margin-top:0.75rem;">
+      <a href="website-privacy-notice.html" style="color:#94A6B8;margin:0 0.75rem;">Privacy Policy</a>
+      <a href="website-terms-of-use.html" style="color:#94A6B8;margin:0 0.75rem;" aria-current="page">Terms of Service</a>
+      <a href="../accessibility.html" style="color:#94A6B8;margin:0 0.75rem;">Accessibility</a>
+      <a href="mailto:info@bellsup.ai" style="color:#94A6B8;margin:0 0.75rem;">info@bellsup.ai</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>

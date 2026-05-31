@@ -1,0 +1,107 @@
+Under
+You’re Invited
+Change to read:
+Please join us for the 2026 World Cup. Enjoy excellent views, cuisine showcasing local flavors, and premium beverage service available pre-match, halftime, and post-match.
+ 
+Under Ticket Delivery
+Change to read:
+After submitting the RSVP form, guests must create a FIFA account. Official match tickets will be delivered digitally to that account prior to the event. Guests will receive additional information regarding seating information and matchday access in advance. 
+ 
+Under Concierge Services
+Change to read:
+For guests traveling in from out of town, the Sheppard team is available to assist with select hospitality arrangements and local recommendations including hotel accommodations, transportation coordination, dining reservations, local experiences and activities, and optional pre-event hospitality experiences. For more information, please contact our concierge at matchdayconcierge@sheppard.com.
+
+
+
+# robots.txt — bellsup.ai
+# Last updated: April 15, 2026
+#
+# Search engines: welcome (with restricted paths).
+# AI training crawlers: no.
+
+# --------------------------------------------------
+# AI training crawlers — disallowed
+# --------------------------------------------------
+
+# OpenAI
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Common Crawl (used for training data)
+User-agent: CCBot
+Disallow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Google AI (extended / Gemini training)
+User-agent: Google-Extended
+Disallow: /
+
+# Meta
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# Apple (Applebot-Extended is for Apple Intelligence training)
+User-agent: Applebot-Extended
+Disallow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Disallow: /
+
+# Cohere
+User-agent: cohere-ai
+Disallow: /
+
+# Bytedance / TikTok
+User-agent: Bytespider
+Disallow: /
+
+# Amazon / Alexa
+User-agent: Amazonbot
+Disallow: /
+
+# Semianalysis / other known scrapers
+User-agent: Timpibot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+# img2dataset (LAION)
+User-agent: img2dataset
+Disallow: /
+
+# --------------------------------------------------
+# Everyone else (search engines, legitimate tools)
+# --------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /backup/
+Disallow: /nginx/
+Disallow: /cards.html
+Disallow: /experience.html
+Disallow: /experience/
+
+Sitemap: https://bellsup.ai/sitemap.xml
+

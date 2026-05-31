@@ -1,0 +1,1489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bells Up AI Design System</title>
+    <meta
+      name="description"
+      content="Bells Up AI Design System for web foundations, components, patterns, accessibility, and development standards."
+    />
+    <meta name="author" content="Bells Up AI" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="logos/svg/BellsUpAI_Symbol_Color_RGB.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="logos/png/BellsUpAI_Symbol_Color_RGB.png" />
+    <link rel="apple-touch-icon" href="logos/png/BellsUpAI_Symbol_Color_RGB.png" />
+
+    <!-- Theme color (browser chrome / mobile status bar) -->
+    <meta name="theme-color" content="#142636" />
+
+    <!-- Open Graph (LinkedIn, Facebook, Slack previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bells Up AI Design System" />
+    <meta property="og:description" content="Web foundations, components, patterns, accessibility, and development standards for Bells Up AI." />
+    <meta property="og:image" content="logos/png/BellsUpAI_Symbol_Color_RGB.png" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Bells Up AI Design System" />
+    <meta name="twitter:description" content="Web foundations, components, patterns, accessibility, and development standards for Bells Up AI." />
+    <meta name="twitter:image" content="logos/png/BellsUpAI_Symbol_Color_RGB.png" />
+
+    <link rel="stylesheet" href="css/design-system.css" />
+  </head>
+  <body>
+
+    <!-- =====================================================
+     TOP NAVIGATION
+     ===================================================== -->
+
+<header class="site-header" id="top">
+  <nav class="nav-shell" aria-label="Main navigation">
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="menuPanel"
+      aria-expanded="false"
+    >
+      <img class="menu-icon" src="images/menu_400dp_A18972_FILL0_wght200_GRAD0_opsz48 (1).svg" alt="" aria-hidden="true" width="24" height="24" />
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <a class="site-logo" href="home.html" aria-label="Bells Up AI home">
+  <img
+    src="logos/svg/BellsUpAI_Logo_Color_RGB.svg"
+    alt="Bells Up AI"
+    class="logo-image"
+  />
+</a>
+
+    <div class="nav-links">
+      <a href="/contact">Contact</a>
+      <a href="/search">Search</a>
+      <a class="login-button" href="/login">Login</a>
+    </div>
+
+  </nav>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <aside class="menu-panel" id="menuPanel" aria-label="Section navigation">
+    <button
+      class="menu-close"
+      id="menuClose"
+      type="button"
+      aria-label="Close menu"
+    >
+      ×
+    </button>
+
+    <div class="menu-links">
+
+      <div class="menu-group">
+        <a class="menu-link" href="#foundations">Foundations</a>
+        <div class="menu-sub-links">
+          <a class="menu-sub-link" href="#typography">Typography</a>
+          <a class="menu-sub-link" href="#color-system">Color System</a>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <a class="menu-link" href="#core-components">Core Components</a>
+        <div class="menu-sub-links">
+          <a class="menu-sub-link" href="#buttons">Buttons</a>
+          <a class="menu-sub-link" href="#cards">Cards</a>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <a class="menu-link" href="#web-patterns">Web Patterns</a>
+        <div class="menu-sub-links">
+          <a class="menu-sub-link" href="#hero-sections">Hero Sections</a>
+          <a class="menu-sub-link" href="#content-blocks">Content Blocks</a>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <a class="menu-link" href="#accessibility">Accessibility</a>
+        <div class="menu-sub-links">
+          <a class="menu-sub-link" href="#contrast-standards">Contrast Standards</a>
+          <a class="menu-sub-link" href="#focus-states">Focus States</a>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <a class="menu-link" href="#development">Development</a>
+        <div class="menu-sub-links">
+          <a class="menu-sub-link" href="#css-variables">CSS Variables</a>
+          <a class="menu-sub-link" href="#component-code-standards">Component Code Standards</a>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <section class="hero" aria-labelledby="hero-heading">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="video/31599-387688486.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 id="hero-heading">Design System</h1>
+    </div>
+  </section>
+</header>
+
+    <!-- =====================================================
+       BELLS UP AI DESIGN SYSTEM
+       ===================================================== -->
+
+    <header class="site-header">
+      <div class="container">
+        <p>
+          A simple web design system for Bells Up AI&mdash;consistent,
+          accessible, and scalable digital experiences.
+        </p>
+        <a
+          href="files/BellsUpDesignMaterials.zip"
+          download
+          class="btn btn-primary btn-sm"
+          style="margin-top: 1.25rem; margin-bottom: 2rem; display: inline-flex; background: #e5e0d6; border-color: #e5e0d6;"
+        >
+          <img src="images/download_400dp_A18972_FILL0_wght200_GRAD0_opsz48.svg" alt="" aria-hidden="true" style="width: 22px; height: 22px; margin-right: 0.5rem;" />
+          Download Design Materials
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- =====================================================
+         FOUNDATIONS
+         ===================================================== -->
+
+      <section
+        class="design-system-section"
+        aria-labelledby="foundations-heading"
+        id="foundations"
+      >
+        <div class="container">
+          <h2 id="foundations-heading">Foundations</h2>
+
+          <article id="typography">
+            <h3>Typography</h3>
+
+            <div class="typeface-showcase">
+
+              <div class="typeface-row">
+                <div class="typeface-specimen">
+                  <span class="specimen-line">Inter SemiBold</span>
+                </div>
+                <div class="typeface-desc">
+                  <h4>Primary Typeface</h4>
+                  <ul class="type-meta-list">
+                    <li><span class="meta-label">Weights</span> Regular (400), Medium (500), SemiBold (600)</li>
+                    <li><span class="meta-label">CSS variable</span> <code>--font-sans</code></li>
+                    <li><span class="meta-label">Use</span> Headings, navigation, interfaces, hero messaging</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="typeface-row">
+                <div class="typeface-specimen typeface-specimen--serif">
+                  <span class="specimen-line">Source Serif 4</span>
+                </div>
+                <div class="typeface-desc">
+                  <h4>Secondary Typeface</h4>
+                  <ul class="type-meta-list">
+                    <li><span class="meta-label">Weights</span> Regular (400), Medium (500)</li>
+                    <li><span class="meta-label">CSS variable</span> <code>--font-serif</code></li>
+                    <li><span class="meta-label">Use</span> Pull quotes, editorial emphasis, strategic statements</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="type-scale">
+              <p class="type-scale-eyebrow">Type Scale — Major Third</p>
+
+              <div class="type-scale-row">
+                <span class="ts-size">3.815 rem</span>
+                <p class="ts-sample ts-h1">H1 Heading</p>
+              </div>
+              <div class="type-scale-row">
+                <span class="ts-size">3.052 rem</span>
+                <p class="ts-sample ts-h2">H2 Heading</p>
+              </div>
+              <div class="type-scale-row">
+                <span class="ts-size">2.441 rem</span>
+                <p class="ts-sample ts-h3">H3 Heading</p>
+              </div>
+              <div class="type-scale-row">
+                <span class="ts-size">1.953 rem</span>
+                <p class="ts-sample ts-h4">H4 Heading</p>
+              </div>
+              <div class="type-scale-row">
+                <span class="ts-size">1.563 rem</span>
+                <p class="ts-sample ts-h5">H5 Heading</p>
+              </div>
+              <div class="type-scale-row">
+                <span class="ts-size">1.25 rem</span>
+                <p class="ts-sample ts-h6">H6 Heading</p>
+              </div>
+              <div class="type-scale-row">
+                <span class="ts-size">1 rem</span>
+                <p class="ts-sample ts-body">P body text</p>
+              </div>
+              <div class="type-scale-row">
+                <span class="ts-size">0.8 rem</span>
+                <p class="ts-sample ts-small">Small text</p>
+              </div>
+            </div>
+
+          </article>
+
+          <article id="color-system">
+            <h3>Color System</h3>
+            <p>
+              Navy functions as the primary emphasis color and carries the
+              greatest visual authority within the system. Slate and Dust
+              support hierarchy, layering, and interface structure, while
+              Glacier Gray provides a neutral supporting tone. Cloud serves as
+              the primary background color and creates spacious, low-noise
+              environments. Light Tan and Taupe introduce warmth without
+              increasing saturation. Graphite provides structural contrast,
+              while Charcoal is reserved for high-emphasis surfaces and dark
+              applications.
+            </p>
+
+            <div class="color-palette">
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-charcoal);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Charcoal</strong>
+                  <code class="swatch-var">--color-charcoal</code>
+                  <button class="swatch-hex" data-hex="#101720" aria-label="Copy hex value #101720">#101720</button>
+                  <span class="swatch-spec">RGB 16 23 32</span>
+                  <span class="swatch-spec">CMYK 82 72 59 75</span>
+                  <span class="swatch-spec">PANTONE BLACK 6 C</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-navy);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Navy</strong>
+                  <code class="swatch-var">--color-navy</code>
+                  <button class="swatch-hex" data-hex="#142636" aria-label="Copy hex value #142636">#142636</button>
+                  <span class="swatch-spec">RGB 20 38 54</span>
+                  <span class="swatch-spec">CMYK 89 74 53 60</span>
+                  <span class="swatch-spec">PANTONE 7546 C</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-slate);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Slate</strong>
+                  <code class="swatch-var">--color-slate</code>
+                  <button class="swatch-hex" data-hex="#3B5466" aria-label="Copy hex value #3B5466">#3B5466</button>
+                  <span class="swatch-spec">RGB 59 84 102</span>
+                  <span class="swatch-spec">CMYK 80 60 43 24</span>
+                  <span class="swatch-spec">PANTONE 5405 C</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-dust);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Dust</strong>
+                  <code class="swatch-var">--color-dust</code>
+                  <button class="swatch-hex" data-hex="#94A6B8" aria-label="Copy hex value #94A6B8">#94A6B8</button>
+                  <span class="swatch-spec">RGB 148 166 184</span>
+                  <span class="swatch-spec">CMYK 44 28 20 0</span>
+                  <span class="swatch-spec">PANTONE 7543 C</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-glacier-gray);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Glacier Gray</strong>
+                  <code class="swatch-var">--color-glacier-gray</code>
+                  <button class="swatch-hex" data-hex="#C6CCCC" aria-label="Copy hex value #C6CCCC">#C6CCCC</button>
+                  <span class="swatch-spec">RGB 198 204 204</span>
+                  <span class="swatch-spec">CMYK 22 14 16 0</span>
+                  <span class="swatch-spec">PANTONE 14-4102 TPG</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-graphite);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Graphite</strong>
+                  <code class="swatch-var">--color-graphite</code>
+                  <button class="swatch-hex" data-hex="#52524F" aria-label="Copy hex value #52524F">#52524F</button>
+                  <span class="swatch-spec">RGB 82 82 79</span>
+                  <span class="swatch-spec">CMYK 64 56 58 34</span>
+                  <span class="swatch-spec">PANTONE 424 C</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-taupe);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Taupe</strong>
+                  <code class="swatch-var">--color-taupe</code>
+                  <button class="swatch-hex" data-hex="#A18972" aria-label="Copy hex value #A18972">#A18972</button>
+                  <span class="swatch-spec">RGB 161 137 114</span>
+                  <span class="swatch-spec">CMYK 37 42 56 6</span>
+                  <span class="swatch-spec">PANTONE 17-1319</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-light-tan);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Light Tan</strong>
+                  <code class="swatch-var">--color-light-tan</code>
+                  <button class="swatch-hex" data-hex="#D9D1C2" aria-label="Copy hex value #D9D1C2">#D9D1C2</button>
+                  <span class="swatch-spec">RGB 217 209 194</span>
+                  <span class="swatch-spec">CMYK 14 14 22 0</span>
+                  <span class="swatch-spec">PANTONE 7527 C</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-cloud);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Cloud</strong>
+                  <code class="swatch-var">--color-cloud</code>
+                  <button class="swatch-hex" data-hex="#F0EEE9" aria-label="Copy hex value #F0EEE9">#F0EEE9</button>
+                  <span class="swatch-spec">RGB 240 238 233</span>
+                  <span class="swatch-spec">CMYK 0 1 3 6</span>
+                  <span class="swatch-spec">PANTONE 11-4201</span>
+                </div>
+              </div>
+
+              <div class="color-swatch">
+                <div class="swatch-block" style="--swatch-color: var(--color-white);"></div>
+                <div class="swatch-details">
+                  <strong class="swatch-name">Bright White</strong>
+                  <code class="swatch-var">--color-white</code>
+                  <button class="swatch-hex" data-hex="#FFFFFF" aria-label="Copy hex value #FFFFFF">#FFFFFF</button>
+                  <span class="swatch-spec">RGB 255 255 255</span>
+                  <span class="swatch-spec">CMYK 0 0 0 0</span>
+                  <span class="swatch-spec">PANTONE 11-0601 TCX</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <article id="spacing-layout">
+            <h3>Spacing &amp; Layout Grid</h3>
+
+            <div class="spacing-scale">
+              <p class="type-scale-eyebrow">Spacing Scale</p>
+
+              <div class="spacing-scale-row">
+                <span class="spacing-token">--space-4</span>
+                <span class="spacing-val">1 rem</span>
+                <span class="spacing-val">16 px</span>
+                <div class="spacing-bar" style="width: 20%;"></div>
+              </div>
+              <div class="spacing-scale-row">
+                <span class="spacing-token">--space-5</span>
+                <span class="spacing-val">1.5 rem</span>
+                <span class="spacing-val">24 px</span>
+                <div class="spacing-bar" style="width: 30%;"></div>
+              </div>
+              <div class="spacing-scale-row">
+                <span class="spacing-token">--space-6</span>
+                <span class="spacing-val">2 rem</span>
+                <span class="spacing-val">32 px</span>
+                <div class="spacing-bar" style="width: 40%;"></div>
+              </div>
+              <div class="spacing-scale-row">
+                <span class="spacing-token">--space-7</span>
+                <span class="spacing-val">3 rem</span>
+                <span class="spacing-val">48 px</span>
+                <div class="spacing-bar" style="width: 60%;"></div>
+              </div>
+              <div class="spacing-scale-row">
+                <span class="spacing-token">--space-8</span>
+                <span class="spacing-val">5 rem</span>
+                <span class="spacing-val">80 px</span>
+                <div class="spacing-bar" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="layout-grid-specs">
+              <div>
+                <h4>Layout Grid</h4>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Columns</span> 12-column responsive</li>
+                  <li><span class="meta-label">Max width</span> <code>--container-width</code> 900 px</li>
+                  <li><span class="meta-label">Gutter</span> <code>--space-5</code> 24 px</li>
+                  <li><span class="meta-label">Page margin</span> <code>--space-8</code> 80 px</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Container Padding</h4>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Section</span> <code>--space-6</code> 32 px</li>
+                  <li><span class="meta-label">Card</span> <code>--space-6</code> 32 px</li>
+                  <li><span class="meta-label">Mobile section</span> <code>--space-5</code> 24 px</li>
+                  <li><span class="meta-label">Breakpoint</span> 768 px</li>
+                </ul>
+              </div>
+            </div>
+
+          </article>
+
+          <article id="borders-radius-shadows">
+            <h3>Borders, Radius &amp; Shadows</h3>
+
+            <div style="margin-bottom: 3rem;">
+              <p class="type-scale-eyebrow">Border Radius</p>
+
+              <div class="radius-grid">
+
+                <div class="radius-swatch">
+                  <div class="radius-preview" style="border-radius: var(--radius-sm);"></div>
+                  <strong>--radius-sm</strong>
+                  <span>8 px</span>
+                </div>
+
+                <div class="radius-swatch">
+                  <div class="radius-preview" style="border-radius: var(--radius-md);"></div>
+                  <strong>--radius-md</strong>
+                  <span>18 px</span>
+                </div>
+
+                <div class="radius-swatch">
+                  <div class="radius-preview" style="border-radius: var(--radius-lg);"></div>
+                  <strong>--radius-lg</strong>
+                  <span>36 px</span>
+                </div>
+
+                <div class="radius-swatch">
+                  <div class="radius-preview radius-preview--pill" style="border-radius: var(--radius-pill);"></div>
+                  <strong>--radius-pill</strong>
+                  <span>999 px</span>
+                </div>
+
+                <div class="radius-swatch">
+                  <div class="radius-preview" style="border-radius: 50%;"></div>
+                  <strong>50%</strong>
+                  <span>Circle</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+              <p class="type-scale-eyebrow">Shadows</p>
+
+              <div class="shadow-grid">
+
+                <div class="shadow-preview" style="box-shadow: var(--shadow-sm);">
+                  <strong>--shadow-sm</strong>
+                  <code>0 4px 18px rgba(15, 23, 42, 0.06)</code>
+                  <code style="margin-top: 0.5rem; color: var(--color-text-light); font-size: 0.7rem;">Cards, panels, floating elements</code>
+                </div>
+
+              </div>
+            </div>
+
+            <div>
+              <p class="type-scale-eyebrow">Borders</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Component border</span> <code>1px solid --color-border</code> #d9e2ec</li>
+                <li><span class="meta-label">Divider</span> <code>1px solid --color-light-tan</code> #d9d1c2</li>
+                <li><span class="meta-label">Emphasis rule</span> <code>1px solid --color-navy</code> #142636</li>
+              </ul>
+            </div>
+
+          </article>
+
+          <article id="responsive-breakpoints">
+            <h3>Responsive Breakpoints</h3>
+
+            <div class="breakpoint-grid">
+
+              <div class="breakpoint-card">
+                <p class="breakpoint-tier">Desktop</p>
+                <p class="breakpoint-range">≥ 1200 px</p>
+                <code class="breakpoint-query">default — no query needed</code>
+                <ul class="breakpoint-notes">
+                  <li>Full navigation visible</li>
+                  <li>900 px max-width container</li>
+                  <li>Multi-column layouts</li>
+                  <li>Full type scale</li>
+                  <li>Generous spacing</li>
+                </ul>
+              </div>
+
+              <div class="breakpoint-card">
+                <p class="breakpoint-tier">Tablet</p>
+                <p class="breakpoint-range">768 px – 1199 px</p>
+                <code class="breakpoint-query">@media (max-width: 1200px)</code>
+                <ul class="breakpoint-notes">
+                  <li>Navigation compacts</li>
+                  <li>Logo scales down</li>
+                  <li>Secondary nav links hidden</li>
+                  <li>Reduced header padding</li>
+                </ul>
+              </div>
+
+              <div class="breakpoint-card">
+                <p class="breakpoint-tier">Mobile</p>
+                <p class="breakpoint-range">&lt; 768 px</p>
+                <code class="breakpoint-query">@media (max-width: 767px)</code>
+                <ul class="breakpoint-notes">
+                  <li>Single column layouts</li>
+                  <li>Section padding 24 px</li>
+                  <li>H1–H4 type scale capped</li>
+                  <li>2-column color palette</li>
+                  <li>Stacked grid components</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         CORE COMPONENTS
+         ===================================================== -->
+
+      <section
+        class="design-system-section"
+        aria-labelledby="components-heading"
+        id="core-components"
+      >
+        <div class="container">
+          <h2 id="components-heading">Core Components</h2>
+
+          <article id="buttons">
+            <h3>Buttons</h3>
+
+            <div style="margin-bottom: 2rem;">
+              <p class="type-scale-eyebrow">Light background</p>
+              <div class="btn-preview">
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-ghost">Ghost</button>
+                <button class="btn btn-primary" disabled>Disabled</button>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+              <p class="type-scale-eyebrow">Dark background</p>
+              <div class="btn-preview btn-preview--dark">
+                <button class="btn btn-cloud">Primary Dark</button>
+                <button class="btn btn-ghost-reverse">Ghost Reverse</button>
+                <button class="btn btn-cloud" disabled>Disabled</button>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+              <p class="type-scale-eyebrow">Specs</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Border radius</span><code>--radius-pill</code> 999 px</li>
+                <li><span class="meta-label">Padding</span>0.75 rem 1.75 rem</li>
+                <li><span class="meta-label">Font</span><code>--font-sans</code> 0.875 rem, weight 400</li>
+                <li><span class="meta-label">Transition</span>background-color, color, border-color 0.2s ease</li>
+                <li><span class="meta-label">Disabled</span>opacity 0.35, pointer-events none</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="type-scale-eyebrow">Color reference</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Primary</span>bg <code>--color-light-tan</code> · text <code>--color-charcoal</code> · hover <code>--color-taupe</code></li>
+                <li><span class="meta-label">Secondary</span>no fill · border <code>--color-light-tan</code> · text <code>--color-charcoal</code> · hover fills light tan</li>
+                <li><span class="meta-label">Ghost</span>no fill · border <code>--color-glacier-gray</code> · text <code>--color-charcoal</code> · hover fills glacier gray at 25%</li>
+                <li><span class="meta-label">Ghost Reverse</span>transparent · border + text white · hover fills white</li>
+                <li><span class="meta-label">Primary Dark</span>bg <code>--color-cloud</code> at 20% opacity · text <code>--color-cloud</code> · no border · hover 35%</li>
+              </ul>
+            </div>
+
+          </article>
+
+          <article id="forms-inputs">
+            <h3>Forms &amp; Inputs</h3>
+
+            <div style="margin-bottom: 2rem;">
+              <p class="type-scale-eyebrow">Input states</p>
+              <div class="form-preview">
+
+                <div class="form-preview-row">
+                  <div class="form-group">
+                    <label class="form-label" for="ex-default">Default</label>
+                    <input id="ex-default" class="form-input" type="text" placeholder="Placeholder text" />
+                    <span class="form-helper">Helper or supporting text</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ex-disabled">Disabled</label>
+                    <input id="ex-disabled" class="form-input" type="text" placeholder="Placeholder text" disabled />
+                    <span class="form-helper">Not editable</span>
+                  </div>
+                </div>
+
+                <div class="form-preview-row">
+                  <div class="form-group">
+                    <label class="form-label" for="ex-error">Error</label>
+                    <input id="ex-error" class="form-input form-input--error" type="text" value="Invalid value" />
+                    <span class="form-error-msg">This field is required</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ex-textarea">Textarea</label>
+                    <textarea id="ex-textarea" class="form-input" placeholder="Enter your message"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-preview-row">
+                  <div class="form-group">
+                    <label class="form-label" for="ex-select">Select</label>
+                    <select id="ex-select" class="form-input">
+                      <option value="">Choose an option</option>
+                      <option>Option one</option>
+                      <option>Option two</option>
+                      <option>Option three</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <span class="form-label">Checkbox &amp; Radio</span>
+                    <label class="form-check"><input type="checkbox" checked /> Selected</label>
+                    <label class="form-check"><input type="checkbox" /> Unchecked</label>
+                    <label class="form-check" style="margin-top: 0.4rem;"><input type="radio" name="ex-radio" checked /> Selected</label>
+                    <label class="form-check"><input type="radio" name="ex-radio" /> Unselected</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div>
+              <p class="type-scale-eyebrow">Specs</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Border</span>1px solid <code>--color-light-tan</code> · focus <code>--color-navy</code></li>
+                <li><span class="meta-label">Border radius</span><code>--radius-sm</code> 8 px</li>
+                <li><span class="meta-label">Padding</span>0.75 rem 1 rem</li>
+                <li><span class="meta-label">Font</span><code>--font-sans</code> 0.875 rem, weight 400</li>
+                <li><span class="meta-label">Placeholder</span>color <code>--color-dust</code></li>
+                <li><span class="meta-label">Disabled</span>opacity 0.45, background <code>--color-cloud</code></li>
+                <li><span class="meta-label">Error</span>border + outline <code>#b04040</code> with error message below</li>
+                <li><span class="meta-label">Checkbox / Radio</span>accent-color <code>--color-navy</code></li>
+              </ul>
+            </div>
+
+          </article>
+
+          <article id="navigation">
+            <h3>Navigation</h3>
+
+            <div>
+              <p class="type-scale-eyebrow">Anatomy</p>
+              <div class="nav-anatomy">
+                <div class="nav-anatomy-bar">
+                  <div class="mock-hamburger">
+                    <i></i><i></i><i></i>
+                  </div>
+                  <div class="nav-anatomy-center">
+                    <img src="logos/svg/BellsUpAI_Logo_Color_RGB.svg" alt="Bells Up AI" style="width: 110px; height: auto; display: block;" />
+                  </div>
+                  <div class="mock-nav-links">
+                    <span>Contact</span>
+                    <span>Search</span>
+                    <span class="mock-login-pill">Login</span>
+                  </div>
+                </div>
+                <div class="nav-anatomy-legend">
+                  <span>Menu button</span>
+                  <span>Logo — absolute center</span>
+                  <span>Nav links + Login</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-spec-grid">
+              <div>
+                <p class="type-scale-eyebrow">Nav bar</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Min height</span>72 px</li>
+                  <li><span class="meta-label">Top padding</span>56 px</li>
+                  <li><span class="meta-label">Max width</span>1800 px, 96 px side margin</li>
+                  <li><span class="meta-label">Logo width</span>178 px · 130 px at ≤ 1200 px</li>
+                  <li><span class="meta-label">Logo position</span>Absolute horizontal center</li>
+                  <li><span class="meta-label">Font</span>Inter 14 px, weight 400</li>
+                  <li><span class="meta-label">Login button</span><code>--color-light-tan</code> pill, 40 px min-height</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Menu panel</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Type</span>Off-canvas, slides in from left</li>
+                  <li><span class="meta-label">Width</span>min(380 px, 74 vw)</li>
+                  <li><span class="meta-label">Padding</span>96 px 56 px 40 px</li>
+                  <li><span class="meta-label">Animation</span>translateX 0.45s ease + opacity 0.35s ease</li>
+                  <li><span class="meta-label">Backdrop</span>Semi-transparent overlay, click to close</li>
+                  <li><span class="meta-label">z-index</span>999</li>
+                  <li><span class="meta-label">Toggle class</span><code>body.menu-open</code></li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <p class="type-scale-eyebrow">Responsive behavior</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">≤ 1200 px</span>Logo scales to 130 px · "Menu" label + secondary nav links hidden</li>
+                <li><span class="meta-label">≤ 767 px</span>Header top padding reduces · full-width container</li>
+              </ul>
+            </div>
+
+          </article>
+
+          <article id="cards">
+            <h3>Cards</h3>
+
+            <div style="margin-bottom: 2rem;">
+              <p class="type-scale-eyebrow">Variants</p>
+              <div class="card-preview-grid">
+
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-meta">Category &middot; 4 min read</p>
+                    <h4 class="card-title">Default Card</h4>
+                    <p class="card-text">White surface with border and shadow. Used for content grouping, features, and information hierarchy.</p>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#cards" class="btn btn-primary btn-sm">Read more</a>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-img"></div>
+                  <div class="card-body">
+                    <p class="card-meta">Category &middot; 6 min read</p>
+                    <h4 class="card-title">Image Card</h4>
+                    <p class="card-text">Full-width image at top with content below. Used for blog posts, resources, and editorial content.</p>
+                  </div>
+                </div>
+
+                <div class="card card--flat">
+                  <div class="card-body">
+                    <p class="card-meta">Accuracy rate</p>
+                    <p class="card-stat">94%</p>
+                    <p class="card-text">Flat variant — no shadow. Used for stats, metrics, and secondary content areas.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+              <p class="type-scale-eyebrow">Horizontal</p>
+              <div class="card card--horizontal">
+                <div class="card-img"></div>
+                <div class="card-body">
+                  <p class="card-meta">Feature overview</p>
+                  <h4 class="card-title">Horizontal Card</h4>
+                  <p class="card-text">Image left, content right. Used for feature lists, blog previews, and structured content rows.</p>
+                  <div style="margin-top: auto; padding-top: 1rem;">
+                    <a href="#cards" class="btn btn-primary btn-sm">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="type-scale-eyebrow">Specs</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Background</span><code>--color-white</code></li>
+                <li><span class="meta-label">Border</span>1px solid <code>--color-border</code></li>
+                <li><span class="meta-label">Border radius</span><code>--radius-md</code> 18 px</li>
+                <li><span class="meta-label">Shadow</span><code>--shadow-sm</code> · omit with <code>.card--flat</code></li>
+                <li><span class="meta-label">Body padding</span><code>--space-6</code> 32 px</li>
+                <li><span class="meta-label">Footer padding</span><code>--space-5</code> 24 px · top border</li>
+                <li><span class="meta-label">Image</span>16:9 ratio · <code>--color-glacier-gray</code> placeholder</li>
+                <li><span class="meta-label">Horizontal image</span>40% width · <code>.card--horizontal</code></li>
+              </ul>
+            </div>
+
+          </article>
+
+          <article id="modals-alerts">
+            <h3>Modals &amp; Alerts</h3>
+
+            <div style="margin-bottom: 3rem;">
+              <p class="type-scale-eyebrow">Modal</p>
+              <div style="background: var(--color-white); border-radius: var(--radius-md); padding: 2.5rem; display: flex; align-items: center; justify-content: center; min-height: 120px; margin-bottom: 1rem;">
+                <button class="btn btn-primary btn-sm" id="demoModalTrigger">Preview modal</button>
+              </div>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Max width</span>520 px</li>
+                <li><span class="meta-label">Border radius</span><code>--radius-md</code> 18 px</li>
+                <li><span class="meta-label">Backdrop</span>Navy at 50% opacity · click outside to close</li>
+                <li><span class="meta-label">Header / footer</span>1px <code>--color-light-tan</code> dividers · 1.75 rem 2 rem padding</li>
+                <li><span class="meta-label">Body font</span><code>--font-serif</code> · <code>--color-graphite</code></li>
+                <li><span class="meta-label">z-index</span>1000</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="type-scale-eyebrow">Alerts</p>
+              <div style="margin-top: 0.5rem;">
+                <div class="alert alert--info">
+                  <div class="alert-content">
+                    <p class="alert-title">Info</p>
+                    <p class="alert-text">Informational message for guidance or neutral context.</p>
+                  </div>
+                  <button class="alert-dismiss" aria-label="Dismiss">&times;</button>
+                </div>
+                <div class="alert alert--success">
+                  <div class="alert-content">
+                    <p class="alert-title">Success</p>
+                    <p class="alert-text">Action completed successfully.</p>
+                  </div>
+                  <button class="alert-dismiss" aria-label="Dismiss">&times;</button>
+                </div>
+                <div class="alert alert--warning">
+                  <div class="alert-content">
+                    <p class="alert-title">Warning</p>
+                    <p class="alert-text">Proceed with caution. This action may have unintended consequences.</p>
+                  </div>
+                  <button class="alert-dismiss" aria-label="Dismiss">&times;</button>
+                </div>
+                <div class="alert alert--error">
+                  <div class="alert-content">
+                    <p class="alert-title">Error</p>
+                    <p class="alert-text">Something went wrong. Please review and try again.</p>
+                  </div>
+                  <button class="alert-dismiss" aria-label="Dismiss">&times;</button>
+                </div>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- Modal (rendered at body level via fixed positioning) -->
+          <div class="modal-backdrop" id="demoModalBackdrop" hidden>
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+              <div class="modal-header">
+                <h4 class="modal-title" id="demoModalTitle">Confirm action</h4>
+                <button class="modal-close" id="demoModalClose" aria-label="Close modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>This is a modal dialog. It sits above the page with a semi-transparent backdrop. Use modals for confirmations, focused forms, or tasks that require the user's full attention before continuing.</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-ghost btn-sm" id="demoModalCancel">Cancel</button>
+                <button class="btn btn-primary btn-sm">Confirm</button>
+              </div>
+            </div>
+          </div>
+
+          <article id="tables">
+            <h3>Tables</h3>
+
+            <div style="margin-bottom: 2rem;">
+              <p class="type-scale-eyebrow">Default</p>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Component</th>
+                      <th>Category</th>
+                      <th>Status</th>
+                      <th>Version</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Buttons</td>
+                      <td>Core Components</td>
+                      <td><span class="badge badge--active">Active</span></td>
+                      <td>1.0</td>
+                    </tr>
+                    <tr>
+                      <td>Forms &amp; Inputs</td>
+                      <td>Core Components</td>
+                      <td><span class="badge badge--active">Active</span></td>
+                      <td>1.0</td>
+                    </tr>
+                    <tr>
+                      <td>Navigation</td>
+                      <td>Core Components</td>
+                      <td><span class="badge badge--active">Active</span></td>
+                      <td>1.0</td>
+                    </tr>
+                    <tr>
+                      <td>Data Grid</td>
+                      <td>Extended</td>
+                      <td><span class="badge badge--pending">Pending</span></td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Charts</td>
+                      <td>Extended</td>
+                      <td><span class="badge badge--draft">Draft</span></td>
+                      <td>&mdash;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+              <p class="type-scale-eyebrow">Striped</p>
+              <div class="table-wrapper">
+                <table class="table--striped">
+                  <thead>
+                    <tr>
+                      <th>Component</th>
+                      <th>Category</th>
+                      <th>Status</th>
+                      <th>Version</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Buttons</td>
+                      <td>Core Components</td>
+                      <td><span class="badge badge--active">Active</span></td>
+                      <td>1.0</td>
+                    </tr>
+                    <tr>
+                      <td>Forms &amp; Inputs</td>
+                      <td>Core Components</td>
+                      <td><span class="badge badge--active">Active</span></td>
+                      <td>1.0</td>
+                    </tr>
+                    <tr>
+                      <td>Navigation</td>
+                      <td>Core Components</td>
+                      <td><span class="badge badge--active">Active</span></td>
+                      <td>1.0</td>
+                    </tr>
+                    <tr>
+                      <td>Data Grid</td>
+                      <td>Extended</td>
+                      <td><span class="badge badge--pending">Pending</span></td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <td>Charts</td>
+                      <td>Extended</td>
+                      <td><span class="badge badge--draft">Draft</span></td>
+                      <td>&mdash;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <p class="type-scale-eyebrow">Specs</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Cell padding</span>0.875 rem 1.25 rem · compact 0.5 rem via <code>.table--compact</code></li>
+                <li><span class="meta-label">Row divider</span>1px solid <code>--color-light-tan</code></li>
+                <li><span class="meta-label">Row hover</span>Light tan tint 20% opacity</li>
+                <li><span class="meta-label">Header font</span>Inter 0.72 rem, weight 700, uppercase, 0.07em tracking</li>
+                <li><span class="meta-label">Cell font</span>Inter 0.875 rem · color <code>--color-graphite</code></li>
+                <li><span class="meta-label">Striped</span>Even rows <code>--color-cloud</code> at 70% · add <code>.table--striped</code></li>
+                <li><span class="meta-label">Wrapper</span><code>.table-wrapper</code> adds border, radius, and horizontal scroll</li>
+              </ul>
+            </div>
+
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         WEB PATTERNS
+         ===================================================== -->
+
+      <section
+        class="design-system-section"
+        aria-labelledby="patterns-heading"
+        id="web-patterns"
+      >
+        <div class="container">
+          <h2 id="patterns-heading">Web Patterns</h2>
+
+          <article id="header-footer">
+            <h3>Header &amp; Footer</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Header</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Position</span>Static · scrolls with page</li>
+                  <li><span class="meta-label">Structure</span>Menu button · centered logo · nav links</li>
+                  <li><span class="meta-label">Background</span>Transparent over hero · <code>--color-background</code> elsewhere</li>
+                  <li><span class="meta-label">Max width</span>1800 px · 96 px side margin</li>
+                  <li><span class="meta-label">Min height</span>72 px</li>
+                  <li><span class="meta-label">Breakpoint</span>Nav compacts at ≤ 1200 px</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Footer</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Structure</span>Minimal · copyright · optional utility links</li>
+                  <li><span class="meta-label">Background</span><code>--color-background</code></li>
+                  <li><span class="meta-label">Margin top</span><code>--space-8</code> 80 px · space above border</li>
+                  <li><span class="meta-label">Padding</span><code>--space-7</code> 48 px top and bottom</li>
+                  <li><span class="meta-label">Font</span>Inter 0.875 rem · <code>--color-text-light</code></li>
+                  <li><span class="meta-label">Tone</span>Restrained — no heavy visual elements</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="hero-sections">
+            <h3>Hero Sections</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Structure</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Media</span>Full-width video or image · <code>object-fit: cover</code></li>
+                  <li><span class="meta-label">Height</span><code>clamp(360px, 29vw, 560px)</code></li>
+                  <li><span class="meta-label">Border radius</span><code>--radius-lg</code> 36 px</li>
+                  <li><span class="meta-label">Margin top</span>60 px · sits below nav</li>
+                  <li><span class="meta-label">Overlay</span><code>rgba(48, 40, 28, 0.18)</code> · warm dark tint</li>
+                  <li><span class="meta-label">Headline</span>White · Inter · centered · <code>clamp</code> sized</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Guidelines</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Headline</span>1–4 words · short and direct</li>
+                  <li><span class="meta-label">Subheadline</span>Optional · Source Serif 4 · italic · centered</li>
+                  <li><span class="meta-label">CTA</span>One primary button · avoid stacking multiple actions</li>
+                  <li><span class="meta-label">Avoid</span>Dense text · multiple headlines · decorative effects</li>
+                  <li><span class="meta-label">Accessibility</span>Video must include <code>muted</code> + <code>aria-hidden</code></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="content-blocks">
+            <h3>Content Blocks</h3>
+            <p class="type-scale-eyebrow">Reusable section patterns</p>
+            <ul class="grid-spec-list" style="margin-bottom: 2rem;">
+              <li><span class="meta-label">Feature row</span>2-column · visual left or right · heading + description + CTA</li>
+              <li><span class="meta-label">Stats band</span>3–4 large numbers with labels · full-width · cloud or navy background</li>
+              <li><span class="meta-label">Card grid</span>2–3 column card layout · use <code>.card</code> component</li>
+              <li><span class="meta-label">Quote / pull</span>Source Serif 4 italic · centered or left-aligned · navy or graphite</li>
+              <li><span class="meta-label">CTA section</span>Headline + supporting text + one primary button · generous vertical spacing</li>
+              <li><span class="meta-label">Logo band</span>Horizontal row of partner or client logos · low contrast · no hover effects</li>
+            </ul>
+            <p class="type-scale-eyebrow">Rules</p>
+            <ul class="grid-spec-list">
+              <li><span class="meta-label">Spacing</span>Minimum <code>--space-8</code> 80 px between sections</li>
+              <li><span class="meta-label">Hierarchy</span>One primary CTA per section · support with secondary only if needed</li>
+              <li><span class="meta-label">Alignment</span>Left-align body copy · center only for hero or short emphasis statements</li>
+              <li><span class="meta-label">Avoid</span>Saturated backgrounds · gradient fills · decorative dividers</li>
+            </ul>
+          </article>
+
+          <article id="page-templates">
+            <h3>Page Templates</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Homepage</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">1</span>Hero — headline + CTA</li>
+                  <li><span class="meta-label">2</span>Positioning statement</li>
+                  <li><span class="meta-label">3</span>Feature overview — 3-column cards</li>
+                  <li><span class="meta-label">4</span>Workflow / how it works</li>
+                  <li><span class="meta-label">5</span>Trust signals / proof points</li>
+                  <li><span class="meta-label">6</span>CTA section</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Product / Feature Page</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">1</span>Hero — product name + headline</li>
+                  <li><span class="meta-label">2</span>Feature overview</li>
+                  <li><span class="meta-label">3</span>Detailed feature rows</li>
+                  <li><span class="meta-label">4</span>Specs or comparison table</li>
+                  <li><span class="meta-label">5</span>CTA section</li>
+                </ul>
+              </div>
+            </div>
+            <div class="layout-grid-specs" style="margin-top: 2rem;">
+              <div>
+                <p class="type-scale-eyebrow">Blog / Resource</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">1</span>Category + title + author + date</li>
+                  <li><span class="meta-label">2</span>Hero image</li>
+                  <li><span class="meta-label">3</span>Article body — max 70ch width</li>
+                  <li><span class="meta-label">4</span>Related content cards</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Contact / Demo</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">1</span>Headline + brief description</li>
+                  <li><span class="meta-label">2</span>Form — name, email, message</li>
+                  <li><span class="meta-label">3</span>Contact details or calendar embed</li>
+                  <li><span class="meta-label">4</span>Trust signal or short proof point</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="empty-loading-states">
+            <h3>Empty &amp; Loading States</h3>
+
+            <div class="states-grid" style="margin-top: 1rem;">
+              <div>
+                <p class="type-scale-eyebrow">Empty state</p>
+                <div class="empty-state">
+                  <p class="empty-icon">○</p>
+                  <h4 class="empty-title">No results found</h4>
+                  <p class="empty-text">Try adjusting your search or filters to find what you're looking for.</p>
+                  <button class="btn btn-primary btn-sm">Clear filters</button>
+                </div>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Skeleton loading</p>
+                <div class="skeleton-card">
+                  <div class="skeleton skeleton-img"></div>
+                  <div class="skeleton-body">
+                    <div class="skeleton skeleton-line skeleton-line--title"></div>
+                    <div class="skeleton skeleton-line"></div>
+                    <div class="skeleton skeleton-line skeleton-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <p class="type-scale-eyebrow">Specs</p>
+              <ul class="grid-spec-list">
+                <li><span class="meta-label">Empty state</span>Centered · icon + title + description + optional action</li>
+                <li><span class="meta-label">Empty padding</span>4 rem top and bottom · white surface · light tan border</li>
+                <li><span class="meta-label">Skeleton color</span><code>--color-light-tan</code> · pulsing opacity 1 → 0.4</li>
+                <li><span class="meta-label">Skeleton timing</span>1.6s ease infinite</li>
+                <li><span class="meta-label">Error state</span>Use <code>.alert--error</code> inline or centered empty-state pattern</li>
+                <li><span class="meta-label">Tone</span>Helpful and direct · avoid apologetic or alarming language</li>
+              </ul>
+            </div>
+
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         ACCESSIBILITY
+         ===================================================== -->
+
+      <section
+        class="design-system-section"
+        aria-labelledby="accessibility-heading"
+        id="accessibility"
+      >
+        <div class="container">
+          <h2 id="accessibility-heading">Accessibility</h2>
+
+          <article id="contrast-standards">
+            <h3>Contrast Standards</h3>
+            <p class="type-scale-eyebrow">WCAG AA minimum — 4.5:1 normal text · 3:1 large text</p>
+            <ul class="grid-spec-list" style="margin-bottom: 2rem;">
+              <li><span class="meta-label">Navy on Cloud</span><code>#142636</code> on <code>#F0EEE9</code> · ~14.4:1 · AAA ✓</li>
+              <li><span class="meta-label">Charcoal on Cloud</span><code>#101720</code> on <code>#F0EEE9</code> · ~16.8:1 · AAA ✓</li>
+              <li><span class="meta-label">Graphite on White</span><code>#52524F</code> on <code>#FFFFFF</code> · ~7.6:1 · AAA ✓</li>
+              <li><span class="meta-label">Navy on White</span><code>#142636</code> on <code>#FFFFFF</code> · ~16.7:1 · AAA ✓</li>
+              <li><span class="meta-label">Charcoal on Light Tan</span><code>#101720</code> on <code>#D9D1C2</code> · ~12.5:1 · AAA ✓</li>
+              <li><span class="meta-label">White on Navy</span><code>#FFFFFF</code> on <code>#142636</code> · ~16.7:1 · AAA ✓</li>
+              <li><span class="meta-label">Dust on White</span><code>#94A6B8</code> on <code>#FFFFFF</code> · ~2.3:1 · Fails — decorative use only</li>
+            </ul>
+            <ul class="grid-spec-list">
+              <li><span class="meta-label">Standard</span>WCAG 2.1 Level AA required · Level AAA where possible</li>
+              <li><span class="meta-label">Large text</span>18 px bold or 24 px regular qualifies as large text</li>
+              <li><span class="meta-label">Non-text</span>UI components and graphical objects require 3:1 minimum</li>
+              <li><span class="meta-label">Tool</span>Verify with WebAIM Contrast Checker before deploying new combinations</li>
+            </ul>
+          </article>
+
+          <article id="focus-states">
+            <h3>Focus States</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Specification</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Style</span>2px solid <code>--color-navy</code></li>
+                  <li><span class="meta-label">Offset</span>2px · ensures visibility against all surfaces</li>
+                  <li><span class="meta-label">Applies to</span>All interactive elements — buttons, links, inputs, selects</li>
+                  <li><span class="meta-label">CSS</span><code>outline: 2px solid var(--color-navy); outline-offset: 2px;</code></li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Rules</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Never</span>Remove focus outline without a visible alternative</li>
+                  <li><span class="meta-label">Never</span>Use <code>outline: none</code> without replacing with custom focus style</li>
+                  <li><span class="meta-label">Mouse users</span>Use <code>:focus-visible</code> to hide focus on mouse click only if needed</li>
+                  <li><span class="meta-label">Dark surfaces</span>Use white outline on navy/charcoal backgrounds</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="semantic-html">
+            <h3>Semantic HTML</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Landmark elements</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">&lt;header&gt;</span>Site header and navigation</li>
+                  <li><span class="meta-label">&lt;nav&gt;</span>Primary and secondary navigation</li>
+                  <li><span class="meta-label">&lt;main&gt;</span>Primary page content · one per page</li>
+                  <li><span class="meta-label">&lt;section&gt;</span>Thematic grouping with a heading</li>
+                  <li><span class="meta-label">&lt;article&gt;</span>Self-contained content unit</li>
+                  <li><span class="meta-label">&lt;aside&gt;</span>Supplementary content</li>
+                  <li><span class="meta-label">&lt;footer&gt;</span>Site or section footer</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Interactive elements</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">&lt;button&gt;</span>Actions — submit, open modal, toggle</li>
+                  <li><span class="meta-label">&lt;a&gt;</span>Navigation — links to pages or anchors</li>
+                  <li><span class="meta-label">&lt;label&gt;</span>Every form input must have an associated label</li>
+                  <li><span class="meta-label">&lt;h1&gt;–&lt;h6&gt;</span>Hierarchical — never skip levels</li>
+                  <li><span class="meta-label">aria-label</span>When visible label is absent</li>
+                  <li><span class="meta-label">aria-labelledby</span>When label is a separate visible element</li>
+                  <li><span class="meta-label">alt text</span>Required on all meaningful images</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="keyboard-navigation">
+            <h3>Keyboard Navigation</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Key interactions</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Tab</span>Move focus forward through interactive elements</li>
+                  <li><span class="meta-label">Shift + Tab</span>Move focus backward</li>
+                  <li><span class="meta-label">Enter / Space</span>Activate button or link</li>
+                  <li><span class="meta-label">Escape</span>Close modal, menu, or overlay</li>
+                  <li><span class="meta-label">Arrow keys</span>Navigate within dropdowns, menus, radio groups</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Implementation rules</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Tab order</span>Must follow logical reading order in the DOM</li>
+                  <li><span class="meta-label">Focus trap</span>Modals must trap focus while open</li>
+                  <li><span class="meta-label">Focus return</span>Return focus to trigger element on modal close</li>
+                  <li><span class="meta-label">Skip link</span>Provide "Skip to main content" as first focusable element</li>
+                  <li><span class="meta-label">tabindex</span>Use <code>0</code> to add to order · avoid positive values</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         DEVELOPMENT
+         ===================================================== -->
+
+      <section
+        class="design-system-section"
+        aria-labelledby="development-heading"
+        id="development"
+      >
+        <div class="container">
+          <h2 id="development-heading">Development</h2>
+
+          <article id="css-variables">
+            <h3>CSS Variables / Design Tokens</h3>
+            <div class="layout-grid-specs" style="margin-bottom: 2rem;">
+              <div>
+                <p class="type-scale-eyebrow">Brand palette</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">--color-charcoal</span><code>#101720</code></li>
+                  <li><span class="meta-label">--color-navy</span><code>#142636</code></li>
+                  <li><span class="meta-label">--color-slate</span><code>#3b5466</code></li>
+                  <li><span class="meta-label">--color-dust</span><code>#94a6b8</code></li>
+                  <li><span class="meta-label">--color-glacier-gray</span><code>#c6cccc</code></li>
+                  <li><span class="meta-label">--color-graphite</span><code>#52524f</code></li>
+                  <li><span class="meta-label">--color-taupe</span><code>#a18972</code></li>
+                  <li><span class="meta-label">--color-light-tan</span><code>#d9d1c2</code></li>
+                  <li><span class="meta-label">--color-cloud</span><code>#f0eee9</code></li>
+                  <li><span class="meta-label">--color-white</span><code>#ffffff</code></li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Semantic tokens</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">--color-background</span>var(--color-cloud)</li>
+                  <li><span class="meta-label">--color-surface</span>var(--color-white)</li>
+                  <li><span class="meta-label">--color-text</span>var(--color-navy)</li>
+                  <li><span class="meta-label">--color-text-light</span>var(--color-graphite)</li>
+                  <li><span class="meta-label">--color-primary</span>var(--color-navy)</li>
+                  <li><span class="meta-label">--color-success</span><code>#4a7c59</code></li>
+                  <li><span class="meta-label">--color-warning</span><code>#a06820</code></li>
+                  <li><span class="meta-label">--color-error</span><code>#b04040</code></li>
+                </ul>
+              </div>
+            </div>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Typography &amp; spacing</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">--font-sans</span>"Inter", sans-serif</li>
+                  <li><span class="meta-label">--font-serif</span>"Source Serif 4", serif</li>
+                  <li><span class="meta-label">--space-4</span>1 rem · 16 px</li>
+                  <li><span class="meta-label">--space-5</span>1.5 rem · 24 px</li>
+                  <li><span class="meta-label">--space-6</span>2 rem · 32 px</li>
+                  <li><span class="meta-label">--space-7</span>3 rem · 48 px</li>
+                  <li><span class="meta-label">--space-8</span>5 rem · 80 px</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Shape &amp; elevation</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">--radius-sm</span>8 px</li>
+                  <li><span class="meta-label">--radius-md</span>18 px</li>
+                  <li><span class="meta-label">--radius-lg</span>36 px</li>
+                  <li><span class="meta-label">--radius-pill</span>999 px</li>
+                  <li><span class="meta-label">--shadow-sm</span>0 4px 18px rgba(15,23,42,0.06)</li>
+                  <li><span class="meta-label">--container-width</span>900 px</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="component-code-standards">
+            <h3>Component Code Standards</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Naming conventions</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Block</span><code>.component</code> — the root element</li>
+                  <li><span class="meta-label">Element</span><code>.component-element</code> — a part of the block</li>
+                  <li><span class="meta-label">Modifier</span><code>.component--variant</code> — a state or variant</li>
+                  <li><span class="meta-label">Example</span><code>.card</code> · <code>.card-body</code> · <code>.card--flat</code></li>
+                  <li><span class="meta-label">Casing</span>Lowercase · hyphen-separated · no underscores</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Rules</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Tokens</span>Always use CSS variables — never hard-code colors or spacing</li>
+                  <li><span class="meta-label">Specificity</span>Keep selectors flat · avoid deep nesting</li>
+                  <li><span class="meta-label">Responsive</span>Add mobile overrides within the component's CSS block</li>
+                  <li><span class="meta-label">Accessibility</span>Include ARIA attributes and semantic HTML by default</li>
+                  <li><span class="meta-label">Avoid</span><code>!important</code> · inline styles · element-only selectors for components</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="responsive-guidelines">
+            <h3>Responsive Behavior Guidelines</h3>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Approach</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Strategy</span>Desktop-first · add <code>max-width</code> media queries to override</li>
+                  <li><span class="meta-label">Breakpoints</span>1200 px tablet · 767 px mobile</li>
+                  <li><span class="meta-label">Fluid sizing</span>Use <code>clamp()</code> for headings and hero heights</li>
+                  <li><span class="meta-label">Container</span><code>width: min(100% - 2rem, 900px)</code> + auto margins</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Component behavior</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Grids</span>Multi-column → single column at 767 px</li>
+                  <li><span class="meta-label">Nav</span>Full nav → compact at 1200 px</li>
+                  <li><span class="meta-label">Type scale</span>H1–H4 capped at smaller sizes on mobile</li>
+                  <li><span class="meta-label">Cards</span>Horizontal layout → stacked at 767 px</li>
+                  <li><span class="meta-label">Tables</span>Wrap in <code>.table-wrapper</code> for horizontal scroll</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="usage-documentation">
+            <h3>Usage Documentation</h3>
+            <div class="layout-grid-specs" style="margin-bottom: 2rem;">
+              <div>
+                <p class="type-scale-eyebrow">Buttons</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Primary</span>One per section · main CTA action</li>
+                  <li><span class="meta-label">Secondary</span>Supporting action alongside primary</li>
+                  <li><span class="meta-label">Ghost</span>Low-priority action · tertiary or nav context</li>
+                  <li><span class="meta-label">Ghost Reverse</span>Dark surfaces only — hero, navy backgrounds</li>
+                  <li><span class="meta-label">Avoid</span>More than 2 buttons in the same row · decorative use</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Cards</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Default</span>Content grouping, features, structured info</li>
+                  <li><span class="meta-label">Image card</span>Blog posts, resources, editorial content</li>
+                  <li><span class="meta-label">Flat card</span>Stats, metrics, dense data layouts</li>
+                  <li><span class="meta-label">Horizontal</span>Feature rows, blog previews, people profiles</li>
+                  <li><span class="meta-label">Avoid</span>Nesting cards · more than 3 in a grid row</li>
+                </ul>
+              </div>
+            </div>
+            <div class="layout-grid-specs">
+              <div>
+                <p class="type-scale-eyebrow">Modals</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Use for</span>Confirmations · focused forms · critical decisions</li>
+                  <li><span class="meta-label">Avoid</span>Non-critical information · marketing messages · large content</li>
+                  <li><span class="meta-label">Always</span>Provide a close button · support Escape key · trap focus</li>
+                </ul>
+              </div>
+              <div>
+                <p class="type-scale-eyebrow">Alerts</p>
+                <ul class="grid-spec-list">
+                  <li><span class="meta-label">Info</span>Guidance or neutral context</li>
+                  <li><span class="meta-label">Success</span>Completed actions · saved states</li>
+                  <li><span class="meta-label">Warning</span>Potentially destructive or irreversible actions</li>
+                  <li><span class="meta-label">Error</span>Failed actions · validation · system errors</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+    <footer class="site-footer">
+      <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+        <p>&copy; Bells Up AI. &nbsp;&middot;&nbsp; <a href="home.html" style="color: var(--color-text-light); text-decoration: none;">Home</a></p>
+        <a href="#top" style="font-family: var(--font-sans); font-size: 0.875rem; color: var(--color-text-light); text-decoration: none;">Back to top &uarr;</a>
+      </div>
+    </footer>
+  </body>
+
+  <script src="js/script.js"></script>
+
+
+</html>
