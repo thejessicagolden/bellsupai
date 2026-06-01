@@ -1773,6 +1773,15 @@ tbody tr:hover {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .grid-spec-list li {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .grid-spec-list .meta-label {
+    min-width: unset;
+  }
 }
 
 /* =====================================================
