@@ -92,7 +92,8 @@
 
 body {
   margin: 0;
-  background: var(--color-background);
+  background: linear-gradient(to bottom, #ffffff, #ececec);
+  min-height: 100vh;
   color: var(--color-text);
   font-family: var(--font-sans);
   line-height: 1.65;
@@ -556,7 +557,7 @@ main {
 
 .design-system-section > .container {
   display: block;
-  background: #f8f8f8;
+  background: #ffffff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-6);
@@ -742,7 +743,7 @@ button:hover {
 /* ---- Cards ---- */
 
 .card {
-  background: #f8f8f8;
+  background: #ffffff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
