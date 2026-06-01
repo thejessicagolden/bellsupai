@@ -1028,7 +1028,12 @@ button:hover {
     grid-template-columns: 1fr;
   }
 
-  .nav-anatomy-legend span:nth-child(2) {
+  .nav-anatomy-legend span:nth-child(2),
+  .nav-anatomy-legend span:nth-child(3) {
+    display: none;
+  }
+
+  .mock-nav-links {
     display: none;
   }
 }
@@ -1320,6 +1325,7 @@ td {
 
 .table-wrapper table {
   margin: 0;
+  min-width: 480px;
 }
 
 .table-wrapper tr:last-child td {
