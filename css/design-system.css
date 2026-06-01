@@ -92,8 +92,10 @@
 
 body {
   margin: 0;
-  background: linear-gradient(to bottom, #ffffff, #ececec);
-  min-height: 100vh;
+  background-color: #ececec;
+  background-image: linear-gradient(to bottom, #ffffff, #ececec);
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
   color: var(--color-text);
   font-family: var(--font-sans);
   line-height: 1.65;
