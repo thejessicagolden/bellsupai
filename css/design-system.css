@@ -54,7 +54,7 @@
   --color-error: #b04040;
 
   /* ---- Semantic Tokens ---- */
-  --color-background: var(--color-cloud);
+  --color-background: #ffffff;
   --color-surface: var(--color-white);
   --color-text: var(--color-navy);
   --color-text-light: var(--color-graphite);
@@ -556,7 +556,7 @@ main {
 
 .design-system-section > .container {
   display: block;
-  background: var(--color-surface);
+  background: #ececec;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -743,7 +743,7 @@ button:hover {
 /* ---- Cards ---- */
 
 .card {
-  background: var(--color-white);
+  background: #ececec;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
